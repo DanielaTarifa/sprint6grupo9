@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %>
+     
+
+<body>
+
+    <%- include('../partials/header') %> 
+
+    <!-- </header> -->
+
+    <main class="main-home">
+        <section class="last-visit">
+            
+            <h3>Todos los productos</h3>
+            <div class="products">
+                <% for(let producto of productos){ %>
+
+                <article>
+                    <div class="imagenes">
+                        <a href="#"> <img src="/img/<%=producto.imagen%>" alt="producto" width="360" class="product_img"></a>
+                    </div>
+                    <div class="main-article">
+                        
+                        <p class="price"><%=mil(producto.precio)%></p>
+                        <p class="discount">Envío Gratis</p>
+                        <h3 class="description"><%=producto.nombre%></h3>
+                        <button class="botone3"><a href="/ProductDetail/<%=producto.id%>" class="letra3">Ver más </a></button>
+                        <button class="botonAdd"><a href="/editarProducto/<%=producto.id%>" class="letra3">Editar </a></button>
+                        <form action="borrar/<%=producto.id%>?_method=delete" method="post">
+                            <button class="botone3">Eliminar</button>
+
+                        </form>
+                    </div>
+                </article>
+                
+                <%} %> 
+            </div>
+            <br>
+            
+            
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %> 
+    
+</body>
+</html>

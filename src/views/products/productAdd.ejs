@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+
+<div class="main-product-add0">
+    <main class="main-product-add">
+        <div class="formulario-add">
+        <form action="/agregarProducto" method="POST" enctype="multipart/form-data">
+        <label for="name">Nombre del Producto</label>
+         <input class="rellenoAdd" type="text" name="nombre" id="nombre" placeholder="Ryzen 5 3600g" required>
+        <br>
+         <label for="price">Precio</label>
+        <input  class="rellenoAdd"type="number" name="precio" id="precio" required>
+<br>
+        <label for="category">Categoría</label>
+        <input  class="rellenoAdd" type="text" name="categoria" id="categoria" required>
+        <br>
+        <label for="category">Descripcion</label>
+        <textarea  class="rellenoAddDescrition" name="descripcion" id="descripcion" cols="10" rows="5" required></textarea>
+<br>
+        <input class="rellenoAdd" type="file" name="imagen" id="imagen" required>  
+
+        <label for="cuotas">Precio 12 cuotas</label>
+        <input class="rellenoAdd" type="number" name="cuotas" id="cuotas" required>
+        <button class="botonAdd" type="submit">Agregar</button>
+        </form>
+  
+    </div>
+    </main>
+</div>
+    <%- include('../partials/footer') %> 
+</body>
+
+</html>

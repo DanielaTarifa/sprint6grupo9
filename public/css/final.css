@@ -1,0 +1,1748 @@
+/*en el home esta el.form0 .submitt y el footer*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*********************************inicio home-css(1/4)*****************************/
+body{
+    background-color: #C5CAE9;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+
+/*primer header0*/
+header .primero{
+    display: block;
+    flex-wrap: wrap ;
+    background: #C5CAE9;
+    justify-content: center;
+    border: solid 1px;
+    border-color: #BDBDBD;
+    width: 100%;
+    padding: 3px;
+}
+
+.Logo{
+    text-align: center;
+}
+
+.inicio {
+    display: none;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 20%;
+}
+
+.inicio i {
+    font-size: 50px;
+    margin: auto;
+    color: #0829e2be;
+}
+/*primer header0*/
+
+
+header .form0{
+    display: flex;
+    padding: 5px;
+}
+
+/*primer header1*/
+.form0{
+    display: block;
+    width: 100%;
+    justify-content: center;
+}
+
+.form0 .la-bara{
+    background-color: white;
+    border: 1px solid #666;
+    color:#666;
+    padding: 3px;
+    min-width: 60%;
+    border-radius: 3px;
+    min-height: 22%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.submitt{
+    background-color: #ebebeb;
+    border: 1px solid #666;
+    color:#000;
+    border-radius: 3px;
+    min-height: 15%;
+    align-items: center;
+    
+}
+/*primer header1*/
+
+
+/*hamburgesa menu*/
+div.burger-menu{
+    text-align: center;
+}
+
+.burger-menu2{
+    display: none;
+    margin-top:0;
+    padding: 0;
+}
+
+#menu:checked  ~ .burger-menu2 {
+    display:block;
+}
+#menu {
+display: none;
+}
+
+.menu {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+}
+
+.desplegableM a{
+    text-decoration: none;
+    color: #dadada;
+} 
+
+/* Estilo del boton cuando se pasa el mouse por encima*/
+.menu:hover{
+    background: #0022AA;
+}
+
+/* Estilo del boton cuando el menú está expandido*/
+#menu:checked ~ .menu {
+    background: #0022AA; 
+}
+
+.desplegableM{
+    display: block;
+    background:#3F51B5 ;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid grey;
+}
+
+/*Estilo cuando el mouse pasa encima de cada link del menu*/
+.desplegableM:hover {
+    filter: brightness(110%);
+}
+
+div.burger-menu i {
+    background-color: #3F51B5;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+/*hamburgesa menu*/
+
+
+/* navegador-header*/
+.tercero{
+    background-color: rgb(43, 43, 204);
+    background: #3F51B5;  
+}
+
+.tercero .nav-barr{
+    display: none;
+}
+
+.nav-barr ul{
+    margin: 10px;
+    text-align: center;
+    list-style-type: none;
+}
+
+header .nav-barr a{
+    list-style-type: none;
+    font-size: 20px;
+    text-decoration:none;
+    font-weight:bolder;
+    color: #FFFFFF; 
+    text-align: center;
+    display: inline-block;
+}
+
+header ul li a:hover{
+    background: #C5CAE9;
+    color: black;
+    border-radius: 3px;
+}
+/* navegador-header*/
+
+
+/*main- home css*/
+.main-home{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.main-home section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+.main-home section h3{
+    margin: 20px 0px;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 37 px;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+
+.main-home .products article{
+    background-color: white;
+}
+
+.discount{
+    padding-left: 4px;
+}
+
+.botone3{
+    background-color: rgb(43, 43, 204);
+    color: #FFFFFF;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    border:none;
+    text-decoration: none;
+    font-family: 'Zen Kurenaido', sans-serif;    
+}
+
+.letra3{
+    text-decoration: none;
+    color:#FFFFFF; 
+}
+
+.botone3:hover{
+    text-decoration: none;
+    background-color:#C5CAE9; 
+    color: black;
+}
+
+.price,
+.discount{
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size:20px;
+}
+/*main- home css*/
+
+
+/*footer*/
+.main-footer{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Zen Kurenaido', sans-serif;
+    text-decoration: none;
+    padding: 20px;
+    background: #3F51B5
+}
+
+.main-footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+.fomulario{
+    padding: 0px 50px;
+    color: white;
+}
+h5{
+    color: white;
+}
+.main-footer ul li {
+    text-decoration: none;
+    color: white;
+    list-style-type:none
+}
+.main-footer ul i{
+    text-decoration: none;
+    color: white;
+}
+
+.logobot
+{
+    background-color: #C5CAE9;
+    padding: 10px;
+    border-radius: 5px;
+}
+/*footer*/
+/***********************************fin home-css(1/4)*********************************/
+
+/*******************************inicio login- css(1/2)**********************************/
+.main-login{
+    justify-content: center;
+    background: linear-gradient(to bottom, #3F51B5, white);
+    border-radius: 15px;
+    padding: 1%;
+    width: 36%;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+.logoL{
+    display: flex;
+    justify-content: center;
+}
+
+.fomulario{
+    display: flex;
+}
+
+.b-de-vuelta{
+    font-size: 30px;
+}
+
+.b-verte{
+    font-size: 23px;
+    text-align: center;
+    margin:auto;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-weight: bold;
+}
+
+.b-de-vuelta{
+    text-align: center;
+    color: black;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.texto{
+    display: flex;
+justify-content: space-between;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.login label{
+    color: black;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-weight: bold;
+}
+
+::placeholder{
+    color: white;
+}
+
+.login input{
+    max-width: 100%;
+    padding: 9px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: none;
+}
+
+/*boton enviar*/
+
+.login button {
+    display: flex;
+    background-color: #0022AA;
+    color: white;
+    justify-content: center;
+    margin: auto;
+    font-size: 18px;
+    margin-top: 20px;
+    font-family: 'Zen Kurenaido';
+    width: 27%;
+}
+
+.login button[type='submit']:hover{
+    background-color: #1259c3;
+}
+/*boton enviar*/
+
+
+/*avisos  de abajo*/
+.cuenta-regist{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.olvidar{
+    display: flex;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Zen Kurenaido', sans-serif;
+    align-items: center;
+    position: relative;
+    margin-left: 20%;
+}
+
+.regist{
+    position: static;
+}
+
+.avisos a{
+    text-decoration: none;
+    color: #0022AA;
+    margin-top: 32px;
+    font-size: 20px;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-weight: bold;
+}
+/*avisos  de abajo*/
+/******************************fin login- css(1/2)*****************************/
+
+/******************************inicio perfil- css(1/1)*****************************/
+.main-perfil{
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.main-perfil .perfil{
+    display: flex;
+    flex-direction:column;
+}
+
+.perfil22{
+    background-color: white;
+    justify-content: center;
+    width: 80%;
+    border-radius: 15px;
+    font-family: 'Zen Kurenaido', sans-serif;
+    padding: 3%;
+}
+
+.fotoPerfil{
+    margin: auto;
+    padding: 2%;
+    border-radius: 80px;
+    border: solid #BDBDBD;
+}
+
+.perfil{
+    display: flex;
+    background: linear-gradient(to bottom, #3F51B5, white);
+    border-radius: 10px;
+    padding: 2%;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+/******************************fin perfil- css(1/1)*****************************/
+
+
+/******************************productsCart- css(1/2)******************************/
+.main-productCart{
+    display: flex;
+    padding: 50px;
+    background: #C5CAE9;   
+    flex-direction: column;
+    justify-content: center;
+}
+
+.h2-compras{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.produc-precio{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgb(82, 81, 81); 
+    font-family: 'Zen Kurenaido', sans-serif; 
+}
+
+th, td {
+    padding: 15px;
+    text-align: left; 
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: #a0a7cf;}
+
+th {
+    background-color: rgb(43, 43, 204);
+    color: white;
+}
+
+/*boton*/
+.botone44{
+    display: flex;
+    justify-content: center;
+    color:white;
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+.botone44:hover{
+    text-decoration: none;
+    background-color:#97a0d8; 
+    color: black; }
+
+.borde22{
+    display: flex;
+    justify-content: center;
+    padding: 0.58%;
+    background-color: rgb(43, 43, 204);
+    /*height: 40px;
+    width: 10%;*/
+    border-radius: 5px;
+    text-decoration: none;
+}
+.borde22:hover{
+    text-decoration: none;
+     background-color:#97a0d8; 
+     color: black;
+ }
+
+ /*botn responsive*/
+ .padre-boton{
+    display: flex;
+    justify-content: center;
+}
+/*botn responsive*/
+
+/*boton*/
+
+.titulo-compra{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Zen Kurenaido', sans-serif;
+    padding-bottom: 10px;
+}
+
+.tabla-productos ul{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    justify-content: space-around;
+}
+.tabla-productos ul li{
+    list-style-type: none;
+    padding: 15px;
+}
+
+/*table*/
+table{
+    overflow-x:auto;
+}
+table {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+}
+/*table*/
+
+.productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+.productos div{
+    justify-content: space-between;
+    padding: 5px;
+}
+.productos img{
+    height: 100px;    
+}
+.cant {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+
+.table1{
+    width: 100%;
+}
+
+/******************************productsCart- css(1/2)******************************/
+
+/*****************************productDetail- css(1/5)*********************************/
+
+/*Producto detallado principal*/
+.container{
+    display: flex;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Zen Kurenaido', sans-serif;
+    margin-top:40px;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Background{
+    display: flex;
+    position: relative;
+    width: 50%;
+    height: 476px;
+    box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1),
+    0 -15px 35px rgba(0, 0, 0, 0.1),
+    0 15px 35px rgba(0, 0, 0, 0.1);
+    background-color: #FFF;
+}
+
+@keyframes width{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.foto1{
+    position: absolute;
+    top: 85px;
+    left: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: .1;
+}
+
+.info{
+    background-color: #fff;
+    z-index: 1;
+    padding: 18px 18px; 
+height: 476px;
+    box-shadow: 15px 0 35px rgba(0, 0, 0, 0.1),
+    0 -15px 35px rgba(0, 0, 0, 0.1),
+    0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.name{
+    padding: 0 0 10px 0;
+}
+
+.name div{
+    display: flex;
+    align-items: center;
+}
+
+.name, .description{
+    border-bottom: 1px solid #dadada;
+}
+
+.description{
+    padding: 10px 0;
+}
+
+.title{
+    color: #3a3a3a;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #dadada;
+}
+
+.text{
+    color: #555;
+    font-size: 17px;
+}
+
+.size-container{
+    margin-bottom: 10px;
+    align-items: center;
+}
+.buy-price{
+    display: flex;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.price22{
+    color: #333;
+    display: flex;
+    align-items:flex-start;
+}
+
+.price22 h1{
+    line-height: 1;
+    font-size: 28px;
+}
+
+.price22 i{
+    font-size: 35px;
+    margin-right: 1px;
+    line-height: 1;
+}
+
+.botoneDetail{
+    background-color: rgb(43, 43, 204);
+    border-radius: 4px;
+    height: 50px;
+    margin-right: 27px;
+    font-size: 20px;
+    border:none;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+.letradetail{
+    display: flex;
+    color: white;
+    text-decoration: none;
+}
+
+.botoneDetail:hover{
+    background-color:#C5CAE9; 
+    color: black;
+}
+/* fin de detalle principal */
+
+/*caja de subtitulo*/
+.subtitulo {
+    display: flex;
+    position: relative;
+    padding: 5px;
+    justify-content: space-evenly;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+.subtitulo h2{
+    margin-right:50% ;
+    font-weight: bold;
+    font-size: 30px;
+}
+body{
+    background-color: #C5CAE9;
+}
+ /*fin  caja de subtitulo*/
+
+ /*main- productDetail*/
+main{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+    flex-wrap: wrap;
+}
+
+main section article img{
+    max-width: 100%;
+    height: auto;
+}
+
+main section h3{
+    margin: 20px 0px;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 37 px;
+}
+
+/*fin main- productDetail*/
+/*****************************fin productDetail- css(1/5)*********************************/
+
+/*****************************inicio recuperar- css(1/2)*********************************/
+
+/*recuperar- ccs*/
+.main-recuperar{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #C5CAE9;
+}
+
+.letras-recuperar{
+    padding-top: 3px;
+    font-size: 20px;
+}
+
+/*texto y titulo*/
+.titulo-recuperar, .letras-recuperar{
+    color: rgb(0, 0, 0);
+    font-family: 'Zen Kurenaido', sans-serif;
+    margin-bottom: 8px;
+}
+
+.titulo-recuperar{
+    font-size: 27px;
+    font-weight: bolder;
+}
+
+.recuperar-contraseña, .validar{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+/*texto y titulo*/
+
+/*barritas para llenar*/
+
+.recuperar-form input, button{
+    max-width: 100%;
+    padding: 9px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    display: flex;
+    border: rgb(169, 170, 211);
+}
+
+/*barritas para llenar*/
+
+
+/*boton enviar*/
+.enviar button  a, .crear button  a{
+    color:white;
+    text-decoration: none;
+    margin: auto;
+    font-size: 14px;
+}
+
+.enviar button, .crear button {
+    max-width: 100%;
+    background-color: #0022AA;
+    border: solid 1px ;
+    margin-left: 35%;
+    width: 25%;
+    font-family: 'Zen Kurenaido';
+}
+
+.enviar button[type='submit']:hover, .crear button[type='submit']:hover{
+    background-color: #1259c3 ;
+}
+
+#e-mailRec{
+    text-decoration: none;
+}
+.recuperar-form{
+    display: flex;
+    background: linear-gradient(to bottom, #6e7bd4, white);
+    background-color: white;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 2% 4%;
+} 
+/*boton enviar*/
+
+/*recuperar- ccs*/
+/*****************************fin recuperar- css(1/2)*********************************/
+
+
+/*****************************inicion register- css(1/1)*********************************/
+/*register- ccs*/
+.main-register{
+padding: 5%;
+width: 70%;
+margin:auto;
+}
+
+.register{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1% 3%;
+    background: linear-gradient(to bottom, #6e7bd4, white);
+    border-radius: 9px;
+    margin: auto;
+    align-items: center;
+}
+
+.register input{
+    width: 100%;
+    border-radius: 5px;
+    width: 50%;
+    height: 33px;
+    border: none;
+    /*margin-bottom: 16px;*/       /*lo comento dani*/
+    margin-top: 16px;               /*lo agreguo dani*/
+}
+
+.register label{
+    display: flex;
+    color: black;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.registrate{
+    color: black;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+::placeholder{
+    background-color: white;
+    color: rgb(43, 43, 204);
+}
+
+.login button{
+    margin-top: 20px;
+}
+
+/*boton enviar*/
+.reg2{
+    display: flex;
+    background-color:#0022AA ;
+    margin: auto;
+    margin-top: 20px;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+.reg2:hover{
+    background-color: #1259c3;
+}
+
+.login button[type='submit']:hover{
+    background-color: #1259c3;
+}
+/*boton enviar*/
+
+/*avisos  de abajo*/
+.cuenta-regist{
+    display: flex;
+    justify-content: space-between;
+}
+
+.olvidar22{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.avisos a{
+    color: black;
+    font-family: 'Zen Kurenaido', sans-serif;
+    text-decoration: none;
+    font-size: 23px;
+    padding-bottom: 3%;
+}
+
+.regist{
+    margin: 10%;
+}
+.regist:hover {background-color: #a0a7cf; border-radius: 3px;}
+/*avisos  de abajo*/
+
+/*register- ccs*/
+/*****************************fin register- css(1/1)*********************************/
+
+/*****************************inicio resumen- css(1/2)*********************************/
+.main-resumen{
+    display: flex;
+    padding: 50px;
+    background: #C5CAE9;   
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo-compra{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Zen Kurenaido', sans-serif;
+    padding-bottom: 10px;
+}
+.titulo-compra h2{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.produc-precio{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgb(82, 81, 81); 
+    font-family: 'Zen Kurenaido', sans-serif; 
+}
+
+/*lineas de la tabla*/
+th, td {
+    padding: 15px;
+    text-align: left; 
+    border-bottom: 1px solid #ddd;
+
+}
+tr:hover {background-color: #a0a7cf;}
+
+th {
+    background-color: rgb(43, 43, 204);
+    color: white;
+}
+/*lineas de la tabla*/
+
+.tabla{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 5px;
+    list-style-type: none;
+    text-decoration: none;
+}
+.tabla a{
+    text-decoration: none;
+}
+.tabla-productos ul{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    justify-content: space-around;
+    
+}
+.tabla-productos ul li{
+    list-style-type: none;
+    padding: 15px;
+    
+}
+.productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+.productos div{
+    
+    padding: 5px;
+}
+.productos img{
+    height: 100px;
+    
+}
+
+.productos i {
+    width: 100px;
+    height: 100px;
+}
+.cant {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*boton*/
+.letra443{
+    display: flex;
+    justify-content: center;
+    color:white;
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+.letra443:hover{
+    text-decoration: none;
+    background-color:#97a0d8; 
+    color: black;
+}
+
+.boton223{
+    display: flex;
+    justify-content: center;
+    padding: 0.58%;
+    background-color: rgb(43, 43, 204);
+    /*height: 40px;
+    width: 10%;*/
+    border-radius: 5px;
+    text-decoration: none;
+}
+.boton223:hover{
+    text-decoration: none;
+    background-color:#97a0d8; 
+    color: black;
+}
+
+/*botn responsive*/
+.padre-boton3{
+    display: flex;
+    justify-content: center;
+    
+}
+/*botn responsive*/
+
+/*table*/
+.table11, .table44{
+    overflow-x:auto;
+}
+.table11, .table44 {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+}
+/*table*/
+
+/*resumen- ccs*/
+
+/*****************************fin resumen- css(1/2)*********************************/
+
+
+@media (min-width: 361px){
+        /*parte header */
+        header .burger-menu{
+            display: none;
+        }
+    
+        .tercero .nav-barr{
+            text-align: center;
+            margin: auto;
+            display: flex;
+            margin: 0 3%;
+        }
+    
+        header .nav-barr{
+            display: flex;
+            justify-content: center;
+            padding: 0 8px 8px 8px;
+        }
+    
+        .nav-barr ul{
+            display: flex;
+        }
+        .nav-barr ul a{
+            margin: 0 5px;
+            display: flex;
+            padding: 0 3px;
+        }
+    
+        .inicio{
+            display: flex;
+        }
+
+    /******************************inicio home-css min 361, (2/4)******************************/
+    .main-home section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .main-home section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .main-home section div.products article{
+        width: 45%;
+    }
+    /******************************fin home-css min 361, (2/4)******************************/
+
+
+    /******************************inicio productDetail, min-361, (2/5)******************************/
+    .botone{width: 30vw;}
+    /******************************fin productDetail, min-361, (2/5)******************************/
+
+    /*recuperar- ccs*/
+    .recuperar-contraseña, .validar{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+    }
+    /*recuperar- ccs*/
+}
+
+
+@media (min-width: 769px){
+
+    /*parte header */
+    header .primero{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Logo{
+        margin: 0, 0, 0, 23px;
+        text-align: left;
+    }
+
+    .segundo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 60%;
+    }
+    /*parte header */
+
+
+    /******************************inicio home-css, min-769, (3/4)******************************/
+    .main-home section div.products article{
+        width: 22%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+    /******************************fin home-css, min-769, (3/4)******************************/
+
+
+    /******************************inicio productDetail, min-769, (3/5)******************************/
+    .botone{width: 10vw;}
+    /******************************fin productDetail, min-769, (3/5)******************************/
+}
+
+
+@media(max-width:361){
+    /******************************inicio productDetail, max-361, (4/5)******************************/
+    .botone{width: 30vw;}
+    /******************************fin productDetail, max-361, (4/5)******************************/
+}
+
+
+@media screen and (max-width: 900px) {
+    *{
+        padding: 0px;
+    }
+    .Background img {
+        max-width: 100%;
+        height: auto;
+}
+    /*footer*/
+    footer{
+        position: relative;
+        bottom: 0px;
+        text-align: center;
+        }
+    
+        .main-footer{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        }
+    
+        .main-footer ul li {
+        margin: 5px 0;
+        }
+        /*footer*/
+
+    /******************************inicio home-css, max-900, (4/4)******************************/
+    .main-home {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    /*nose*/
+    .titulo-compra{
+        display: block;
+    }
+    /******************************fin home-css, max-900, (4/4)******************************/
+
+.formulario-add{
+    display: flex;
+    color: black;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 7%;
+}
+
+.main-login{
+    width: 95%;
+}
+
+.main-perfil{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.perfil22{
+    width: 100%;
+    padding: 7%;
+}
+
+.perfil{
+    width: 70%;
+    padding: 7%;
+}
+.main-productCart{
+    padding: 0px;
+}
+
+.main-recuperar{
+    padding: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.register input {
+    width: 80%;
+}
+
+.main-register {
+    margin-bottom: 9%;
+    margin-top: 9%;
+    padding: 0px;
+    width: auto;
+}
+
+}
+
+@media screen and (max-width:769px){
+    /******************************inicio productsCart- css, max-769, (2/2)******************************/
+    /*responsive table*/
+    .table1{
+        width: 100%;   
+    }
+
+    .padret2 .table2{
+        width: 100%;
+    }
+
+    .table1, .table2, .table3, .table4, thead, tbody, th, td, tr{
+        display: block ;
+    }
+
+    
+    .table1 thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .table1 tr{
+        margin: 0 0 1rem 0;
+    }
+
+    .table1 tr:nth-child(odd){
+        background: #C5CAE9;   
+    }
+    .table1 td{
+        border: none;
+        border-bottom: 1px solid #eee ;
+        position: relative;
+        padding-left: 50%;
+        font-weight: bold;
+    }
+
+    .table1 td:before{
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    .table1 td:nth-of-type(1):before {content: "Producto";}
+    .table1 td:nth-of-type(2):before {content: "Descripción";}
+    .table1 td:nth-of-type(3):before {content: "Cantidad";}
+    .table1 td:nth-of-type(4):before {content: "Precio";}
+    .table1 td:nth-of-type(5):before {content: "Monto Total";}
+    
+
+    .table2 thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .table2 tr{
+        margin: 0 0 1rem 0;
+    }
+
+    .table2 td{
+        border: none;
+        border-bottom: 1px solid #eee ;
+        position: relative;
+        padding-left: 50%;
+        font-weight: bold;
+    }
+
+    .table2 td:before{
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+
+    }
+
+    .table2 td:nth-of-type(1):before {content: "Tipo de Entrega";}
+    .table2 td:nth-of-type(2):before {content: " ";}
+
+
+    .table3 thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .table3 tr{
+        margin: 0 0 1rem 0;
+    }
+
+    .table3 td{
+        border: none;
+        border-bottom: 1px solid #eee ;
+        position: relative;
+        padding-left: 50%;
+        background-color: rgb(43, 43, 204);
+        color: white;
+        font-weight: bold;
+    }
+    .pago22{
+        color:white;
+    }
+
+    .table3 td:before{
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+
+    }
+
+    .table3 td:nth-of-type(1):before {content: "Método de pago";}
+    .table3 td:nth-of-type(2):before {content: " ";}
+
+
+    .table4 thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .table4 tr{
+        margin: 0 0 1rem 0;
+    }
+ 
+    .table4 td{
+        border: none;
+        border-bottom: 1px solid #eee ;
+        position: relative;
+        padding-left: 50%;
+        font-weight: bold;
+    }
+
+    .table4 td:before{
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    .table4 td:nth-of-type(1):before {content: "Monto final";}
+
+    .final-precio{
+        position: absolute;
+        left: 6px;
+        background-color: rgb(43, 43, 204);
+        color: white; 
+    }
+    /*responsive table*/
+
+    /******************************productsCart- css, max-769, (2/2)******************************/
+    /******************************inicio resumen- css, max-769, (2/2)******************************/
+    .main-resumen{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .table11{
+        width: 100%;
+    }
+
+    .table11{
+        width: 100%;
+    }
+
+    .table11, .table44, thead, tbody, th, td, tr{
+        display: block ;
+    }
+
+    
+    .table11 thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .table11 tr{
+        margin: 0 0 1rem 0;
+    }
+
+    .table11 tr:nth-child(odd){
+        background: #C5CAE9;   
+    }
+    .table11 td{
+        border: none;
+        border-bottom: 1px solid #eee ;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .table11 td:before{
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    .table11 td:nth-of-type(1):before {content: "Producto";}
+    .table11 td:nth-of-type(2):before {content: "Descripción";}
+    .table11 td:nth-of-type(3):before {content: "Cantidad";}
+    .table11 td:nth-of-type(4):before {content: "Precio";}
+    .table11 td:nth-of-type(5):before {content: "Monto Total";}
+    
+
+    .table44 thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .table44 tr{
+        margin: 0 0 1rem 0;
+    }
+
+    .table44 tr:nth-child(odd){
+        background: #C5CAE9;   
+    }
+
+    .table44 td{
+        border: none;
+        border-bottom: 1px solid #eee ;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .table44 td:before{
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    .table44 td:nth-of-type(1):before {content: "Monto final";}
+
+    .final-precio2{
+        position: absolute;
+        left: 6px;
+    }
+    .main-resumen {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        width:100%;}
+
+    /******************************fin resumen- css, max-769,(2/2)******************************/
+
+}
+
+/******************************inicio productDetail, max-1000 y 490, (5/5)******************************/
+@media (max-width: 1000px){
+    .card{
+        flex-direction: column;
+        width: 100%;
+        box-shadow: 0 0 35px 1px rgba(0, 0, 0, 0.2);
+    }
+    .card > div{
+        width: 100%;
+        box-shadow: none;
+    }
+    .foto1{
+        display: flex;
+        top: 20%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 490px){
+    .foto1{
+        display: flex;
+        font-size: 7rem;
+    }
+    .title{
+        font-size: .9rem;
+    }
+    .text{
+        font-size: .8rem;
+    }
+    .price h1{
+        font-size: 1.5rem;
+    }
+    .price i{
+        font-size: .9rem;
+    }
+    .size{
+        width: 30px;
+        height: 30px;
+        margin: 0 8px;
+        font-size: .9rem;
+        line-height: 30px;
+    }
+    .info{
+        padding: 20px;
+    }
+    .Background img { 
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .fotoPerfil { 
+        max-width: 100%;
+        height: auto;
+    }
+
+    .perfil{
+        width: 100%;
+    }
+    .productos{
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+    
+}
+/******************************fin productDetail, max-1000 y 490, (5/5)******************************/
+
+/*** inicio agregar producto **/
+.main-product-add,.main-product-add0{
+    display: flex;
+    justify-content: center;
+}
+
+.main-product-add{
+    background-color: #C5CAE9;
+    padding: 2% 7%;
+}
+.formulario-add{
+    display: flex;
+    color: black;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 20px;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 80px;
+    padding-bottom: 38px;
+}
+.botonAdd{
+    width: 100%;
+    background-color: darkcyan;
+    justify-content: center;
+    border-radius: 5px ; 
+    display: flex; 
+    color: white;
+}
+.botonAdd:hover{
+    background-color: rgb(7, 194, 194);
+    color: white;
+}
+
+.botonAdd a {
+    display: flex; 
+    color: white;
+    text-decoration: none;
+}
+
+.rellenoAdd{
+    display: flex;
+    border-radius: 5px;
+    width: 100%;
+    height: 7%;
+    flex-direction: column;
+    border: none;
+}
+.rellenoAddDescrition{
+    display: flex;
+    border-radius: 5px;
+    width: 100%;
+    height: 22%;
+    flex-direction: column;
+    border: none;   
+}
+
+/*** fin agregar producto **/
+
+/*** inicio editar producto*/
+
+.main-editProduct,.edit-product-padre{
+    display: flex;
+    justify-content: center;
+}
+
+.main-editProduct{
+background-color: #C5CAE9;
+margin-top: 20px;
+}
+
+.edit-product-padre{
+    color: black;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    flex-direction: column;
+    margin-bottom: 80px;
+    padding-bottom: 38px
+}
+
+
+.text-danger{
+    color: rgb(218, 34, 34); /*lo agrego Dani*/
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-weight: bolder;
+}

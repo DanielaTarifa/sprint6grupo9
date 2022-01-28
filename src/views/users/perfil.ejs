@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %> 
+
+
+<body>
+
+    <%- include('../partials/header') %>
+
+
+    <main class="main-perfil">
+
+        <div class="perfil">
+            <img class="fotoPerfil" src="img/avatar/<%= user.avatar %>" alt="FotoPerfil" width="150"
+            height="145">
+            <label>Nombre: <%= user.nombre %></label>
+            <label>Apellido:<%= user.apellido %> </label>
+            <label>Nombre de usuario: <%= user.nombreDeUsuario%>  </label>
+            <label>E-mail: <%= user.email %></label>
+            <label>Telefono: <%= user.tel%></label>
+        </div>
+
+        <div class="perfil22">
+            <div><h1>Última Compra </h1></div>
+            <div class="productos">
+                <img src="/img/Ram.jpg" width="100" alt="ram">
+                <div>Memora PNY DDR4 8GB 3200MHz XLR8 Epic RGB </div>
+                <div class="cant">
+                    Cantidad: 2 
+                </div>
+                <div>Total $ 77.144</div>
+
+            </div>
+        </div>
+    </main>
+
+    <%- include('../partials/footer') %> 
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+[
+ {
+  "id": "1",
+  "nombre": "Mouse de juego Redragon Cobra M711-FPS",
+  "descripcion": "Su objetivo es producir equipamiento de alta gama para jugadores, con excelentes prestaciones y a un precio accesible,\r\nmouse a cable con RGB cambiables.\r\nGarantía extendida.",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $438",
+  "precio": 3089,
+  "imagen": "imagen-1641167678307",
+  "categoria": "destacados"
+ },
+ {
+  "id": "2",
+  "nombre": "Placa de Video Asrock Radeon RX 580 8GB GDDR5 Phantom",
+  "descripcion": "Diseño de ventilador de rodamientos doble. Heatpipes compuestos de alto rendimiento. Soporta resolución 8K. Salidas gráficas: 3 DisplayPort, HDMI, DVI. MD Phantom Gaming D Radeon RX580 8G OC. Kit Marvo Scorpion 4 en 1 SP Teclado RGB + Mouse + Auriculares + Mouse Pad.",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $14.583",
+  "precio": 125000,
+  "imagen": "imagen-1640723751475",
+  "categoria": "destacados"
+ },
+ {
+  "id": "3",
+  "nombre": "Kit Marvo Scorpion 4 en 1 Teclado RGB + combo",
+  "descripcion": "¡TODO LO NECESARIO PARA JUGAR!. Este pack Scorpion agrupa un ratón, un teclado, unos auriculares con micrófono y una alfombrilla que combinan perfectamente para ser tremendamente eficaz en todos los juegos. Todos los periféricos reunidos en un solo pack y a un precio increible.",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $466",
+  "precio": 4000,
+  "imagen": "kit.jpg",
+  "categoria": "destacados"
+ },
+ {
+  "id": "4",
+  "nombre": "Procesador AMD RYZEN 7 3700X 4.4 GHz AM4",
+  "descripcion": "Este procesador no cuenta con graficos integrados. Socket AM4 3ra Gen. Núcleos 8. Hilos 16. Frecuencia 3.6 Ghz. Frecuencia Turbo 4 GHz. Proceso de Fabricación 7 nm. Incluye Cooler CPU Sí. TDP 65 W. Caché. L2 4 MB. L3 32 MB",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $5355",
+  "precio": 45900,
+  "imagen": "procesador2.png",
+  "categoria": "destacados"
+ },
+ {
+  "id": "5",
+  "nombre": "Pc De Escritorio Armada Computadora I5 16gb 480gb ",
+  "descripcion": "Procesador: Intel Core i5 - 4 Nucleos, 3.30Ghz Max, 4 Subprocesos Memoria Ram: 16Gb Almacenamiento: 480Gb SSD Gabinete: Sentey / Overtech OV-710 / PCBOX Incluye Teclado, Mouse y Parlante.- Ideal para uso escolar y clases online.-Stock disponible.-codigo de producto 1000.",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $10.939",
+  "precio": 77144,
+  "imagen": "fotopc11.jpg",
+  "categoria": "ofertas"
+ },
+ {
+  "id": "6",
+  "nombre": "Water Cooler Master Masterliquid Ml240l V2",
+  "descripcion": "Nuevo diseño de bomba con componentes internos mejorados para una mayor resistencia al desgaste y un rendimiento más duradero. EPDM de grado industrial especialmente formulado utilizado para sellado reforzado para la prevención de fugas.",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $",
+  "precio": 17495,
+  "imagen": "imagen-1641168537083",
+  "categoria": "ofertas"
+ },
+ {
+  "id": "7",
+  "nombre": "Mouse Pad gamer HyperX Standard Fury S Pro",
+  "descripcion": "Es tan fácil deslizar el mouse. Con tu HyperX Standard podrás llenar la pantalla de tu ordenador de clicks. Su elaborada superficie le dará precisión y comodidad a tus movimientos",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $466",
+  "precio": 3189,
+  "imagen": "imagen-1641168882699",
+  "categoria": "ofertas"
+ },
+ {
+  "id": "8",
+  "nombre": "headset gamer logitech g series g432 black",
+  "descripcion": "Experimentá la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los Logitech G432 no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $1276",
+  "precio": 8999,
+  "imagen": "imagen-1641169093897",
+  "categoria": "ofertas"
+ },
+ {
+  "id": "9",
+  "nombre": "Pc De Escritorio Armada Computadora I5 16gb 480gb teclado + mouse +parlantes",
+  "descripcion": "Procesador: Intel Core i5 - 4 Nucleos, 3.30Ghz Max, 4 Subprocesos Memoria Ram: 16Gb Almacenamiento: 480Gb SSD Gabinete: Sentey / Overtech OV-710 / PCBOX Incluye Teclado, Mouse y Parlante.- Ideal para uso escolar y clases online.-Stock disponible.-codigo de producto 1000.",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $10.939",
+  "precio": 77144,
+  "imagen": "fotopc11.jpg",
+  "categoria": "interes"
+ },
+ {
+  "id": 10,
+  "nombre": "Placa de Video Asrock Radeon RX 580 8GB GDDR5 Phantom Gaming Elite",
+  "descripcion": "Diseño de ventilador de rodamientos doble. Heatpipes compuestos de alto rendimiento. Soporta resolución 8K. Salidas gráficas: 3 DisplayPort, HDMI, DVI. MD Phantom Gaming D Radeon RX580 8G OC. Kit Marvo Scorpion 4 en 1 SP Teclado RGB + Mouse + Auriculares + Mouse Pad.",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $14.583",
+  "precio": 125000,
+  "imagen": "placa.jpg",
+  "categoria": "interes"
+ },
+ {
+  "id": 11,
+  "nombre": "Kit Marvo Scorpion 4 en 1 SP Teclado RGB + Mouse + Auriculares + Mouse Pad",
+  "descripcion": "¡TODO LO NECESARIO PARA JUGAR!. Este pack Scorpion agrupa un ratón, un teclado, unos auriculares con micrófono y una alfombrilla que combinan perfectamente para ser tremendamente eficaz en todos los juegos. Todos los periféricos reunidos en un solo pack y a un precio increible.",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $466",
+  "precio": 4000,
+  "imagen": "kit.jpg",
+  "categoria": "interes"
+ },
+ {
+  "id": 12,
+  "nombre": "Procesador AMD RYZEN 7 3700X 4.4 GHz AM4 Wraith Prism RGB Led Cooler",
+  "descripcion": "Este procesador no cuenta con graficos integrados. Socket AM4 3ra Gen. Núcleos 8. Hilos 16. Frecuencia 3.6 Ghz. Frecuencia Turbo 4 GHz. Proceso de Fabricación 7 nm. Incluye Cooler CPU Sí. TDP 65 W. Caché. L2 4 MB. L3 32 MB",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $5355",
+  "precio": 45900,
+  "imagen": "procesador2.png",
+  "categoria": "interes"
+ },
+ {
+  "id": "13",
+  "nombre": "Fuente de alimentación para PC Thermaltake Technology Smart",
+  "descripcion": "Potencia de salida de 600W. Luz led de colores incluida. Fuente de tipo ATX. Con certificación de eficiencia 80 Plus White. Diámetro del ventilador de 120mm. Refrigeración por aire. Transforma la energía. De uso imprescindible para el buen funcionamiento de la PC.",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $772",
+  "precio": 6085,
+  "imagen": "imagen-1640724750403",
+  "categoria": "destacados"
+ }
+]

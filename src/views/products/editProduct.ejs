@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %> 
+
+    <main class="main-editProduct">
+        <div class="edit-product-padre">
+            <form action="/editarProducto/<%=producto.id%>?_method=put " method="POST" enctype="multipart/form-data">
+                <label for="name">Nombre del Producto</label>
+                 <input class="rellenoAdd" type="text" name="nombre" id="nombre" value="<%=producto.nombre%>" >
+                <br>
+                 <label for="price">Precio</label>
+                <input  class="rellenoAdd"type="number" name="precio" id="precio" value="<%=producto.precio%>" >
+        <br>
+                <label for="category">Categoría</label>
+                <input  class="rellenoAdd" type="text" name="categoria" id="categoria" value="<%=producto.categoria%>" >
+                <label for="category">Descripcion</label>
+                <textarea  class="rellenoAddDescrition" name="descripcion" id="descripcion" cols="10" rows="5" ><%=producto.descripcion%></textarea>
+        <br>
+                <input class="rellenoAdd" type="file" name="imagen" id="imagen" >  
+        <br>
+                <label for="cuotas">Precio 12 cuotas</label>
+                <input class="rellenoAdd" type="number" name="cuotas" id="cuotas" value="<%=Number(producto.cuotas.slice(26))%>" >
+                <button class="botonAdd" type="submit">Editar</button>
+                </form>
+
+
+        </div>
+    </main>
+
+    <%- include('../partials/footer') %> 
+</body>
+
+</html>

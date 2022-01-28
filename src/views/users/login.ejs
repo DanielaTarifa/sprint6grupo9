@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %> 
+    
+
+<body>
+
+    <%- include('../partials/header') %> 
+
+<main class="main-login">
+    <div class="formulario">
+
+        <h1 class="b-de-vuelta">INICIAR SESIÓN</h1>
+        
+
+
+        <form action="/login" method="POST">
+
+            <div class="login">
+                    <label for="e-mail">Nombre de usurio o correo electrónico</label>
+                    <input type="email" name="email" id="e-mail" placeholder="Ingrese su usuario o email" required>
+
+                    <%  if (locals.errors && errors.email) {  %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %> 
+                        </div>
+                        <% } %>  
+                
+                    <label for="contraeña">Contraseña</label>
+                    <input type="password" name="password" id="contraeña" placeholder="Ingrese su contraseña" required>
+                    
+
+
+                    <div class="texto">
+                        <label for="recordarme">
+                            <input type="checkbox" name="recordarme" id="recordarme" selected>
+                                Recordarme</label>
+                    </div>
+
+
+                    <button class="iniciar" type="submit">Ingresar</a> </button>
+                
+
+                <div class="avisos">
+
+                    <div class="olvidar">
+                        <a href="/recuperar" class="olv"> - Olvidé mi contraseña -</a>
+                        
+                        </div>
+                    <div class="cuenta-regist">
+                    <p class="b-verte">¿Aún no tienes una cuenta? </p> 
+
+                    <a href="/register" class="regist">Regístrate</a>
+                    </div>
+
+                    
+                    </div>
+                    <div class="logoL">
+                        <img src="/img/este_si3.png" width="95" alt="LogoMPC">
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </form>
+    </div>
+
+</main>
+
+    <%- include('../partials/footer') %> 
+    
+</body>
+</html>
