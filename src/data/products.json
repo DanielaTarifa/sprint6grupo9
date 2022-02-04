@@ -11,7 +11,7 @@
  {
   "id": "2",
   "nombre": "Placa de Video Asrock Radeon RX 580 8GB GDDR5 Phantom",
-  "descripcion": "Diseño de ventilador de rodamientos doble. Heatpipes compuestos de alto rendimiento. Soporta resolución 8K. Salidas gráficas: 3 DisplayPort, HDMI, DVI. MD Phantom Gaming D Radeon RX580 8G OC. Kit Marvo Scorpion 4 en 1 SP Teclado RGB + Mouse + Auriculares + Mouse Pad.",
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   "cuotas": "COMPRALO EN 12 CUOTAS DE $14.583",
   "precio": 125000,
   "imagen": "imagen-1640723751475",
@@ -29,7 +29,7 @@
  {
   "id": "4",
   "nombre": "Procesador AMD RYZEN 7 3700X 4.4 GHz AM4",
-  "descripcion": "Este procesador no cuenta con graficos integrados. Socket AM4 3ra Gen. Núcleos 8. Hilos 16. Frecuencia 3.6 Ghz. Frecuencia Turbo 4 GHz. Proceso de Fabricación 7 nm. Incluye Cooler CPU Sí. TDP 65 W. Caché. L2 4 MB. L3 32 MB",
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   "cuotas": "COMPRALO EN 12 CUOTAS DE $5355",
   "precio": 45900,
   "imagen": "procesador2.png",
@@ -37,11 +37,11 @@
  },
  {
   "id": "5",
-  "nombre": "Pc De Escritorio Armada Computadora I5 16gb 480gb ",
-  "descripcion": "Procesador: Intel Core i5 - 4 Nucleos, 3.30Ghz Max, 4 Subprocesos Memoria Ram: 16Gb Almacenamiento: 480Gb SSD Gabinete: Sentey / Overtech OV-710 / PCBOX Incluye Teclado, Mouse y Parlante.- Ideal para uso escolar y clases online.-Stock disponible.-codigo de producto 1000.",
+  "nombre": "Pc Armada Dual Core 4 Gigas Ram Hd 320g ",
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
   "cuotas": "COMPRALO EN 12 CUOTAS DE $10.939",
   "precio": 77144,
-  "imagen": "fotopc11.jpg",
+  "imagen": "imagen-1643521355946",
   "categoria": "ofertas"
  },
  {
@@ -55,11 +55,11 @@
  },
  {
   "id": "7",
-  "nombre": "Mouse Pad gamer HyperX Standard Fury S Pro",
-  "descripcion": "Es tan fácil deslizar el mouse. Con tu HyperX Standard podrás llenar la pantalla de tu ordenador de clicks. Su elaborada superficie le dará precisión y comodidad a tus movimientos",
-  "cuotas": "COMPRALO EN 12 CUOTAS DE $466",
-  "precio": 3189,
-  "imagen": "imagen-1641168882699",
+  "nombre": "Pc Intel I5 9400 9na Gen Ram 8gb Ddr4 Ssd 480",
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $5528",
+  "precio": 66346,
+  "imagen": "imagen-1643521803210",
   "categoria": "ofertas"
  },
  {

@@ -1,7 +1,7 @@
 <header class="main-header">
 
     <div class="primero">
-
+        
         <div class="Logo">
             <a href="/"><img src="/img/este_si3.png" width="150" alt="LogoMPC"></a>
         </div>
@@ -19,11 +19,16 @@
         
 
 
+        
         <div class="inicio">
+            <% if (locals.isLogged) { %>
+                <li class="nav-barr" ><a href="/logout">Cerrar sesión</a></li>
+                <div class="carrito"><a href="/productCart"><i class="fas fa-shopping-cart"></i></a></div>
+            <% }else { %>
             <div class="user-cirlcle"><a href="/login"><i class="fas fa-user-circle"></i></a></div>
-            <li class="nav-barr" ><a href="/logout">salir de cuenta</a></li>
-             
-            <div class="carrito"><a href="/productCart"><i class="fas fa-shopping-cart"></i></a></div>
+            
+            <% } %>
+            
         </div>
 
     </div>
@@ -54,11 +59,16 @@
                 <li class="desplegableM"><a href="/todos">Productos </a></li>
                 <li class="desplegableM"><a href="#">Encontra tu equipo</a></li>
                 <li class="desplegableM"><a href="#">Arma tu pc</a></li>
-                <li class="desplegableM"><a href="/perfil">Mi cuenta</a></li>
+                
                 <li class="desplegableM"><a href="#">Ayuda</a></li>
-                <li class="desplegableM"><a href="/productCart">Mi carrito</a></li>
-                <li class="desplegableM"><a href="/login">Ingresar a perfil</a></li>
-                <li class="desplegableM"><a href="/logout">salir de cuenta</a></li>
+                <% if (locals.isLogged) { %>
+                    <li class="desplegableM"><a href="/perfil">Mi cuenta</a></li>
+                    <li class="desplegableM"><a href="/productCart">Mi carrito</a></li>
+                    <li class="desplegableM"><a href="/logout">Cerrar sesión</a></li>
+                
+                    <% }else { %>
+                <li class="desplegableM"><a href="/login">Iniciar Sesión</a></li>
+                <% } %>
             </ul>
     </div>
 

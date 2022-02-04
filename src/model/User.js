@@ -1,9 +1,12 @@
 const fs= require('fs');
 const { all } = require('../routers/UsersRutas');
-
+const path = require('path');
 
 const User={
+
+    
     fileName:'./src/data/user.json',
+    
 
     getData: function(){
         return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'))
@@ -17,7 +20,12 @@ const User={
     }
     return 1;
     },
-
+    find: function (id) {
+        let rows = this.readFile();
+        
+        return rows.find(i => i.id == id);
+    },
+    
     findAll: function (){
         return this.getData();
     },
@@ -60,6 +68,11 @@ const User={
 
             return oneRow;
         });
+        // escribo el archivo
+       
+        this.writeFile(updatedRows);
+
+        return row.id;
     },
     perfil: (req,res)=>{
         res.render('./perfil')

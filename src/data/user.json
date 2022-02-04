@@ -11,107 +11,58 @@
  },
  {
   "id": 2,
-  "avatar": "user2.jpg",
-  "nombre": "Peter",
-  "apellido": "Parker",
-  "nombreDeUsuario": "PeterParker01",
-  "email": "Peterparker001@gmail.com",
-  "tel": 42783847,
-  "password": 123456789
- },
- {
-  "id": 3,
-  "avatar": "user3.jpg",
-  "nombre": "Bruce",
-  "apellido": "Diaz",
-  "nombreDeUsuario": "Bruce Diaz",
-  "email": "iamnotbatman@gmail.com",
-  "tel": 42465794,
-  "password": 123456789
- },
- {
-  "id": 4,
-  "avatar": "user4.jpg",
-  "nombre": "Jhon",
-  "apellido": "Snow",
-  "nombreDeUsuario": "Jhon Snow",
-  "email": "yonosena@gmail.com",
-  "tel": 48574032,
-  "password": 123456789
- },
- {
-  "id": 5,
-  "avatar": "user5.jpg",
-  "nombre": "Cosme",
-  "apellido": "Fulanito",
-  "nombreDeUsuario": "Cosme Fulanito",
-  "email": "yonoconoscoaningunohomero@gmail.com",
-  "tel": 42346584,
-  "password": 123456789
- },
- {
-  "id": 6,
-  "avatar": "user6.jpg",
-  "nombre": "Buzz",
-  "apellido": "Lightyear",
-  "nombreDeUsuario": "Buzz Lightyear",
-  "email": "soylaseñoranesbit@gmail.com",
-  "tel": 42478384,
-  "password": 123456789
- },
- {
-  "id": 7,
-  "nombre": "Floor",
-  "apellido": "canteros",
-  "nombreDeUsuario": "floooooor",
-  "email": "flor.nicole16@gmail.com",
-  "tel": "1160498896",
-  "password": "$2a$10$nijdvX35tAehGLR34pG4Oe5EmzBlP23IPqBRIct1zpGzXnFwYLnYW",
-  "otraPassword": "1234567890",
-  "avatar": "${Date.now()}_img${path.extname(file.originalname)}"
- },
- {
-  "id": 8,
-  "nombre": "tomi",
-  "apellido": "tomas",
-  "nombreDeUsuario": "tomis",
-  "email": "tomas@tomass.com",
-  "tel": "1160498896",
-  "password": "$2a$10$Trgh2efXghZg0Oz46Ls5ou2RN1Z96io/9Rlh5XHqRtlFwS8kXCvhO",
-  "otraPassword": "1160498896",
-  "avatar": "1643222528025_img.jpg"
- },
- {
-  "id": 9,
   "nombre": "tomi",
   "apellido": "tomas",
   "nombreDeUsuario": "tomiiiiiiiii",
   "email": "tomas@tomass.com.ar",
   "tel": "1160498896",
   "password": "$2a$10$t7GGLpJyih9jdDSn0iSk9OF40Q.5eOM6jXTPJjw5WziO.csCGy2k.",
-  "otraPassword": "1234567890",
-  "avatar": "1643230072076_img.jpg"
+  "avatar": "1643230072076_img.jpg",
+  "rol": "cliente"
  },
  {
-  "id": 10,
+  "id": 3,
   "nombre": "florencia",
   "apellido": "canteros",
   "nombreDeUsuario": "flopifloo",
   "email": "flor@gmail.com",
   "tel": "1160498888",
   "password": "$2a$10$hWB8oETYpbj.XYq32yTzMu4AIVRJFK1qcPDv0lG1pzIPXtqBUuKBq",
-  "otraPassword": "1234567890",
-  "avatar": "1643231793615_img.png"
+  "avatar": "1643231793615_img.png",
+  "rol": "cliente"
  },
  {
-  "id": 11,
+  "id": 4,
   "nombre": "usuario",
   "apellido": "prueba",
   "nombreDeUsuario": "@usuario22",
   "email": "usuario@gmail.com",
   "tel": "1160498896",
   "password": "$2a$10$ivFayD6kj4K0hpEuZTYjm.uDntM7qqJL7bQARm2kYmtpeIxMHwDZ2",
-  "otraPassword": "1234567890",
-  "avatar": "1643290990063_img.jpg"
+  "avatar": "1643290990063_img.jpg",
+  "rol": "cliente"
+ },
+ {
+  "id": 5,
+  "nombre": "floor",
+  "apellido": "canteros",
+  "nombreDeUsuario": "florenciaN",
+  "email": "florN@gmail.com.ar",
+  "tel": "1160498896",
+  "password": "$2a$10$H5qoE6IL9WlzU9F0npqjvO4T.OQdRQsKJAEG0E8zXdNyAlbJwe1pa",
+  "avatar": "1643598853286_img.jpg",
+  "rol": "cliente"
+ },
+ {
+  "id": 6,
+  "nombre": "administrador",
+  "apellido": "admin",
+  "nombreDeUsuario": "@adminMPC",
+  "email": "administrador@mpc.com",
+  "tel": "1160498896",
+  "password": "$2a$10$hfN6860YGB.l4LH.KWcWwuPGVhHy6qyoN1xIe3RJWUfw4gscBeY9e",
+  "otraPassword": "mpc12345",
+  "avatar": "1643601918812_img.jpg",
+  "rol": "admin"
  }
 ]

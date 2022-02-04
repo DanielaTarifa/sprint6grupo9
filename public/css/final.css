@@ -4,7 +4,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
 }
 
 /*********************************inicio home-css(1/4)*****************************/
@@ -17,7 +16,6 @@ header{
     flex-direction: column;
     font-family: 'Zen Kurenaido', sans-serif;
 }
-
 
 /*primer header0*/
 header .primero{
@@ -50,7 +48,6 @@ header .primero{
     color: #0829e2be;
 }
 /*primer header0*/
-
 
 header .form0{
     display: flex;
@@ -86,7 +83,6 @@ header .form0{
     
 }
 /*primer header1*/
-
 
 /*hamburgesa menu*/
 div.burger-menu{
@@ -160,7 +156,6 @@ div.burger-menu i {
 }
 /*hamburgesa menu*/
 
-
 /* navegador-header*/
 .tercero{
     background-color: rgb(43, 43, 204);
@@ -193,7 +188,6 @@ header ul li a:hover{
     border-radius: 3px;
 }
 /* navegador-header*/
-
 
 /*main- home css*/
 .main-home{
@@ -261,7 +255,6 @@ article div.main-article{
     font-size:20px;
 }
 /*main- home css*/
-
 
 /*footer*/
 .main-footer{
@@ -391,7 +384,6 @@ justify-content: space-between;
 }
 /*boton enviar*/
 
-
 /*avisos  de abajo*/
 .cuenta-regist{
     display: flex;
@@ -460,9 +452,7 @@ justify-content: space-between;
     padding: 2%;
     font-family: 'Zen Kurenaido', sans-serif;
 }
-
 /******************************fin perfil- css(1/1)*****************************/
-
 
 /******************************productsCart- css(1/2)******************************/
 .main-productCart{
@@ -527,19 +517,18 @@ th {
 }
 .borde22:hover{
     text-decoration: none;
-     background-color:#97a0d8; 
-     color: black;
- }
+    background-color:#97a0d8; 
+    color: black;
+}
 
- /*botn responsive*/
- .padre-boton{
+/*botn responsive*/
+.padre-boton{
     display: flex;
     justify-content: center;
 }
 /*botn responsive*/
 
 /*boton*/
-
 .titulo-compra{
     display: flex;
     justify-content: space-between;
@@ -597,7 +586,6 @@ table {
 .table1{
     width: 100%;
 }
-
 /******************************productsCart- css(1/2)******************************/
 
 /*****************************productDetail- css(1/5)*********************************/
@@ -1005,7 +993,6 @@ th, td {
     padding: 15px;
     text-align: left; 
     border-bottom: 1px solid #ddd;
-
 }
 tr:hover {background-color: #a0a7cf;}
 
@@ -1031,26 +1018,21 @@ th {
     flex-direction: row;
     text-decoration: none;
     justify-content: space-around;
-    
 }
 .tabla-productos ul li{
     list-style-type: none;
     padding: 15px;
-    
 }
 .productos{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-   
 }
 .productos div{
-    
     padding: 5px;
 }
 .productos img{
     height: 100px;
-    
 }
 
 .productos i {
@@ -1116,10 +1098,7 @@ th {
 }
 /*table*/
 
-/*resumen- ccs*/
-
 /*****************************fin resumen- css(1/2)*********************************/
-
 
 @media (min-width: 361px){
         /*parte header */
@@ -1171,10 +1150,8 @@ th {
     }
     /******************************fin home-css min 361, (2/4)******************************/
 
-
     /******************************inicio productDetail, min-361, (2/5)******************************/
     .botone{width: 30vw;}
-    /******************************fin productDetail, min-361, (2/5)******************************/
 
     /*recuperar- ccs*/
     .recuperar-contraseña, .validar{
@@ -1231,7 +1208,6 @@ th {
     .botone{width: 30vw;}
     /******************************fin productDetail, max-361, (4/5)******************************/
 }
-
 
 @media screen and (max-width: 900px) {
     *{
@@ -1325,7 +1301,11 @@ th {
     width: auto;
 }
 
+.botoneDetail{
+    margin: 0px;
+    width: 70%;
 }
+ }
 
 @media screen and (max-width:769px){
     /******************************inicio productsCart- css, max-769, (2/2)******************************/
@@ -1342,7 +1322,6 @@ th {
         display: block ;
     }
 
-    
     .table1 thead tr{
         position: absolute;
         top: -9999px;
@@ -1379,7 +1358,6 @@ th {
     .table1 td:nth-of-type(4):before {content: "Precio";}
     .table1 td:nth-of-type(5):before {content: "Monto Total";}
     
-
     .table2 thead tr{
         position: absolute;
         top: -9999px;
@@ -1410,7 +1388,6 @@ th {
 
     .table2 td:nth-of-type(1):before {content: "Tipo de Entrega";}
     .table2 td:nth-of-type(2):before {content: " ";}
-
 
     .table3 thead tr{
         position: absolute;
@@ -1448,7 +1425,6 @@ th {
     .table3 td:nth-of-type(1):before {content: "Método de pago";}
     .table3 td:nth-of-type(2):before {content: " ";}
 
-
     .table4 thead tr{
         position: absolute;
         top: -9999px;
@@ -1458,7 +1434,6 @@ th {
     .table4 tr{
         margin: 0 0 1rem 0;
     }
- 
     .table4 td{
         border: none;
         border-bottom: 1px solid #eee ;
@@ -1508,7 +1483,6 @@ th {
     .table11, .table44, thead, tbody, th, td, tr{
         display: block ;
     }
-
     
     .table11 thead tr{
         position: absolute;
@@ -1545,7 +1519,6 @@ th {
     .table11 td:nth-of-type(4):before {content: "Precio";}
     .table11 td:nth-of-type(5):before {content: "Monto Total";}
     
-
     .table44 thead tr{
         position: absolute;
         top: -9999px;
@@ -1590,7 +1563,6 @@ th {
         width:100%;}
 
     /******************************fin resumen- css, max-769,(2/2)******************************/
-
 }
 
 /******************************inicio productDetail, max-1000 y 490, (5/5)******************************/
@@ -1668,7 +1640,7 @@ th {
 
 .main-product-add{
     background-color: #C5CAE9;
-    padding: 2% 7%;
+    margin-bottom: 25px;
 }
 .formulario-add{
     display: flex;
@@ -1715,11 +1687,9 @@ th {
     flex-direction: column;
     border: none;   
 }
-
 /*** fin agregar producto **/
 
 /*** inicio editar producto*/
-
 .main-editProduct,.edit-product-padre{
     display: flex;
     justify-content: center;
@@ -1734,13 +1704,19 @@ margin-top: 20px;
     color: black;
     font-family: 'Zen Kurenaido', sans-serif;
     font-size: 20px;
-    font-weight: bold;
     flex-direction: column;
     margin-bottom: 80px;
     padding-bottom: 38px
 }
-
-
+#eliminar{
+background-color:rgb(216, 17, 17);
+}
+#editar{
+    background-color: darkcyan;
+}#editar:hover{
+    background-color: rgb(7, 194, 194);
+    color: white;
+}
 .text-danger{
     color: rgb(218, 34, 34); /*lo agrego Dani*/
     font-family: 'Zen Kurenaido', sans-serif;

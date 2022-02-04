@@ -6,6 +6,8 @@
 
     <main class="main-editProduct">
         <div class="edit-product-padre">
+            <h2>Editar producto</h2>
+
             <form action="/editarProducto/<%=producto.id%>?_method=put " method="POST" enctype="multipart/form-data">
                 <label for="name">Nombre del Producto</label>
                  <input class="rellenoAdd" type="text" name="nombre" id="nombre" value="<%=producto.nombre%>" >

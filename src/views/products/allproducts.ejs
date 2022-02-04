@@ -13,7 +13,7 @@
     <main class="main-home">
         <section class="last-visit">
             
-            <h3>Todos los productos</h3>
+            <h3>TODOS LOS PRODUCTOS</h3>
             <div class="products">
                 <% for(let producto of productos){ %>
 
@@ -27,9 +27,9 @@
                         <p class="discount">Envío Gratis</p>
                         <h3 class="description"><%=producto.nombre%></h3>
                         <button class="botone3"><a href="/ProductDetail/<%=producto.id%>" class="letra3">Ver más </a></button>
-                        <button class="botonAdd"><a href="/editarProducto/<%=producto.id%>" class="letra3">Editar </a></button>
+                        <button class="botone3" id= "editar"><a href="/editarProducto/<%=producto.id%>" class="letra3">Editar </a></button>
                         <form action="borrar/<%=producto.id%>?_method=delete" method="post">
-                            <button class="botone3">Eliminar</button>
+                            <button  id="eliminar" class="botone3">Eliminar</button>
 
                         </form>
                     </div>

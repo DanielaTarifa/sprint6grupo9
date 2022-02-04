@@ -21,6 +21,7 @@
             <label>Telefono: <%= user.tel%></label>
         </div>
 
+        <% if (user && user.rol == "cliente") { %>
         <div class="perfil22">
             <div><h1>Última Compra </h1></div>
             <div class="productos">
@@ -33,6 +34,20 @@
 
             </div>
         </div>
+        <% } %>
+
+        <% if (user && user.rol == "admin") { %>
+
+            <div class="perfil22">
+                <div><h1>Panel de administrador</h1></div>
+                <div class="producto">
+                    <button  class="reg2" style="width: auto;margin-left: 13px;" type="submit"><a  style="color: aliceblue; text-decoration: none;" href="/allproducts">Modificar productos</a> </button>
+                    <button  class="reg2" style="width: auto;margin-left: 13px;" type="submit"><a href="/agregarProducto" style="color: aliceblue; text-decoration: none;" >Crear producto</a> </button>
+                </div>
+            </div>
+        </main>
+
+            <% } %>
     </main>
 
     <%- include('../partials/footer') %> 

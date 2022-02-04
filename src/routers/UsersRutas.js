@@ -8,11 +8,11 @@ const path = require('path');
 const uploadFile = require('../middlewares/multerMiddleware');
 const {validaciones} =require('../middlewares/validatorMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
-const packageName = require('../middlewares/guestMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware');
 
 //controllers
 let usersController= require('../controllers/usersController');
-const guestMiddleware = require('../middlewares/guestMiddleware');
 
 
 //rutas:
@@ -27,14 +27,20 @@ router.get('/register',guestMiddleware, usersController.register);
 //procesa el registro
 router.post('/register', uploadFile.single('avatar'), validaciones, usersController.processRegister);
 
-
+//no se puede entrar xq no se como hicieron el model
+//les deje echo las funciones solo falta q arreglen como editar el json
+router.get('/register/:id', uploadFile.single('avatar'), validaciones, usersController.edit);
+router.put('/register/:id', uploadFile.single('avatar'), validaciones, usersController.editar);
 //formulario de recuperar
 router.get('/recuperar', usersController.recover);
 //formulario de perfil
 router.get('/perfil', authMiddleware ,usersController.perfil);
 
-//para salir del perfil
-router.get('/', usersController.logout);
 
+//para salir del perfil
+router.get('/logout/', userLoggedMiddleware, usersController.logout);
+
+
+router.delete('/borrar/:id',usersController.delete);
 
 module.exports= router;
