@@ -1724,34 +1724,80 @@ background-color:rgb(216, 17, 17);
     font-weight: bolder;
 }
 
-
-/**********************************CARRUCEL***********************************/
-#contentItemCarrucel{
-    /*border: 5PX solid black;*/
-    height: 550px;
+/********carrousel flor sin arrobas medias resposive *****/
+.carrousel{
+    margin: 100px;
+    width: 100%;
+    margin: auto;
     overflow: hidden;
-    
-    
 }
 
-.itemCarrucel{/*elemento padre*/
-    /*border: 1px solid black;*/
+div.carrousel ul {
+    display: flex;
+    padding: 0;
+    width: 300%;
+    animation: cambio 15s infinite;
+}
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -100%;
+    }
+    75% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: -200%
+        
+    } 
+}
+
+div.carrousel img {
+    width: 100%;
+}
+div.carrousel li {
+    width: 100%;
+    list-style: none;
+}
+
+/**********************************CARRUCEL***********************************
+#contentItemCarrucel{
+    /*border: 5PX solid black;
+    height: 550px;
+    overflow: hidden;
+}
+
+.itemCarrucel{/*elemento padre
+    /*border: 1px solid black;
     height: 100%;
     position: relative;
 }
 .tarjetaCarrucel{
-    
     height: 100%;
 }
 .flechasCarrucel{
-    /*background-color: #6273b8;****sino lo saco lo pinta todo*****/
+    /*background-color: #6273b8;****sino lo saco lo pinta todo****
     
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;/*centrar desde eje y*/
+    align-items: center;/*centrar desde eje y
     justify-content: space-between;
     padding: 20px;
 }
@@ -1768,31 +1814,30 @@ background-color:rgb(216, 17, 17);
 #tarjetaCarrucel-3{
     background-color: #bec92b;
 }
-**/
+**
 .aCarrucel{
-    text-decoration: none; /*saca la linea azul de link*/
-    
+    text-decoration: none; /*saca la linea azul de link
 }
 
 .flechasCarrucel i{
     color: white;
+    font-size: 38px; /*agranda las flechas
+ {
 
-}
 #contenPuntos{
-    /*background-color: #666;*/
+    /*background-color: #666;
     display: flex;
     justify-content: space-evenly;
-    
 }
 
-#contenPuntos > a{ /*solo afecta a las 'a' contenidas en #contenPuntos*/
+#contenPuntos > a{ /*solo afecta a las 'a' contenidas en #contenPuntos
     font-size: 1em;
     text-decoration: none;
-    color:#929090;
+    color:#3F51B5;
 }
 
 #contenPuntos > a :hover{
-    color:#3f3f3f;
+    color:#070707;
 }
 
 .tarjetaCarrucel img{
@@ -1802,29 +1847,40 @@ background-color:rgb(216, 17, 17);
 
 @media (max-width: 769px){
     #contentItemCarrucel{
-        /*border: 5PX solid black;*/
+        /*border: 5PX solid black;
         height: 280px;
         width: 100%;
         overflow: hidden;
-        
-        
+    }
+    .flechasCarrucel i{
+        font-size: 16px;
     }
 }
 
 @media (max-width: 500px){
     #contentItemCarrucel{
-        /*border: 5PX solid black;*/
+        /*border: 5PX solid black;
         height: 180px;
         width: 100%;
-        overflow: hidden;
-        
-        
+        overflow: hidden;  
     }
 }
 
 @media (max-width: 280px){
     #contentItemCarrucel{
-        /*border: 5PX solid black;*/
+        /*border: 5PX solid black;
+    display: none;
+    }
+    #contenPuntos{
+        display: none;
+    }
+    .brCarrrucel{
+        display: none;
+    }
+    
+}
+@media (max-width: 280px){
+    #contentItemCarrucel{
        display: none;
     }
     #contenPuntos{
@@ -1834,4 +1890,5 @@ background-color:rgb(216, 17, 17);
         display: none;
     }
 }
+
 /**********************************CARRUCEL***********************************/
