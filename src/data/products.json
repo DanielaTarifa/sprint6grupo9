@@ -10,7 +10,7 @@
  },
  {
   "id": "2",
-  "nombre": "Placa de Video Asrock Radeon RX 580 8GB GDDR5 Phantom",
+  "nombre": "Placa de Video Asrock Radeon RX 580 8GB",
   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   "cuotas": "COMPRALO EN 12 CUOTAS DE $14.583",
   "precio": 125000,
@@ -115,5 +115,32 @@
   "precio": 6085,
   "imagen": "imagen-1640724750403",
   "categoria": "destacados"
+ },
+ {
+  "nombre": "Mouse de juego Razer DeathAdder Essential negro",
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $717",
+  "precio": 4324,
+  "imagen": "imagen-1644204762918",
+  "categoria": "oferta",
+  "id": 14
+ },
+ {
+  "nombre": "Mouse de juego Logitech G Series Lightsync G203 lila",
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $407",
+  "precio": 2457,
+  "imagen": "imagen-1644204946757",
+  "categoria": "oferta",
+  "id": 15
+ },
+ {
+  "id": "16",
+  "nombre": "Auriculares Gamer Vincha Luz Led Microfono Sonido Hd",
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
+  "cuotas": "COMPRALO EN 12 CUOTAS DE $281",
+  "precio": 1699,
+  "imagen": "imagen-1644205345610",
+  "categoria": "oferta"
  }
 ]
