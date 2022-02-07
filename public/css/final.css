@@ -726,9 +726,9 @@ height: 476px;
 body{
     background-color: #C5CAE9;
 }
- /*fin  caja de subtitulo*/
+/*fin  caja de subtitulo*/
 
- /*main- productDetail*/
+/*main- productDetail*/
 main{
     width: 90%;
     margin: 0 auto;
@@ -757,7 +757,6 @@ main section h3{
 
 /*****************************inicio recuperar- css(1/2)*********************************/
 
-/*recuperar- ccs*/
 .main-recuperar{
     display: flex;
     justify-content: center;
@@ -790,7 +789,6 @@ main section h3{
 /*texto y titulo*/
 
 /*barritas para llenar*/
-
 .recuperar-form input, button{
     max-width: 100%;
     padding: 9px;
@@ -801,7 +799,6 @@ main section h3{
 }
 
 /*barritas para llenar*/
-
 
 /*boton enviar*/
 .enviar button  a, .crear button  a{
@@ -866,7 +863,7 @@ margin:auto;
     width: 50%;
     height: 33px;
     border: none;
-    margin-top: 16px;               /*lo agreguo dani*/
+    margin-top: 16px;
 }
 
 .register label{
@@ -975,8 +972,6 @@ th, td {
     text-align: left; 
     border-bottom: 1px solid #ddd;
 }
-tr:hover {background-color: #a0a7cf;}
-
 th {
     background-color: rgb(43, 43, 204);
     color: white;
@@ -1036,19 +1031,12 @@ th {
     font-size: 20px;
     font-family: 'Zen Kurenaido', sans-serif;
 }
-.letra443:hover{
-    text-decoration: none;
-    background-color:#97a0d8; 
-    color: black;
-}
 
 .boton223{
     display: flex;
     justify-content: center;
     padding: 0.58%;
     background-color: rgb(43, 43, 204);
-    /*height: 40px;
-    width: 10%;*/
     border-radius: 5px;
     text-decoration: none;
 }
@@ -1062,7 +1050,6 @@ th {
 .padre-boton3{
     display: flex;
     justify-content: center;
-    
 }
 /*botn responsive*/
 
@@ -1284,7 +1271,10 @@ th {
     margin: 0px;
     width: 70%;
 }
- }
+.main-resumen{
+    padding: 5%;
+}
+}
 
 @media screen and (max-width:769px){
     /******************************inicio productsCart- css, max-769, (2/2)******************************/
@@ -1311,9 +1301,6 @@ th {
         margin: 0 0 1rem 0;
     }
 
-    .table1 tr:nth-child(odd){
-        background: #C5CAE9;   
-    }
     .table1 td{
         border: none;
         border-bottom: 1px solid #eee ;
@@ -1534,13 +1521,6 @@ th {
         position: absolute;
         left: 6px;
     }
-    .main-resumen {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        width:100%;}
-
     /******************************fin resumen- css, max-769,(2/2)******************************/
 }
 
@@ -1555,18 +1535,9 @@ th {
         width: 100%;
         box-shadow: none;
     }
-    .foto1{
-        display: flex;
-        top: 20%;
-        left: 5%;
-    }
 }
 
 @media (max-width: 490px){
-    .foto1{
-        display: flex;
-        font-size: 7rem;
-    }
     .title{
         font-size: .9rem;
     }
@@ -1854,7 +1825,6 @@ div.carrousel li {
     .brCarrrucel{
         display: none;
     }
-    
 }
 @media (max-width: 280px){
     #contentItemCarrucel{
@@ -1867,5 +1837,4 @@ div.carrousel li {
         display: none;
     }
 }
-
 /**********************************CARRUCEL***********************************/
