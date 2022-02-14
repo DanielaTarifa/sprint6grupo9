@@ -5,6 +5,17 @@ const  bcryptjs = require ('bcryptjs');
 const session = require('express-session');
 
 
+const path = require('path');
+let db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
+
+//una forma de llamar a modelos de la carpeta models
+const Users = db.Users;
+const Rols = db.Rols;
+ 
+
 const usersController={
     register:(req,res)=>{
 

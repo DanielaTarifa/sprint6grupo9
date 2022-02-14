@@ -3,6 +3,16 @@ const jsonDB = require('../model/jsonDatabase');
 const product = jsonDB('products');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+const path = require('path');
+let db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize")
+
+//una forma de llamar a modelos de la carpeta models
+const Products = db.Products;
+const Categories = db.Categories;
+const Numbersofinstallments = db.Numbersofinstallments;
+const Sections = db.Sections
 const productController={
     all:(req,res)=>{
         let productos =product.all();
