@@ -118,6 +118,8 @@ display: none;
 .desplegableM a{
     text-decoration: none;
     color: #dadada;
+    display: block;/*este y el padding de abajo lo arreglo al botoon*/
+    padding: 10px 20px;
 } 
 
 /* Estilo del boton cuando se pasa el mouse por encima*/
@@ -134,7 +136,7 @@ display: none;
     display: block;
     background:#3F51B5 ;
     margin: 0;
-    padding: 10px;
+    /*padding: 10px;**esto hacia mas grande el boton pero pos eso grande era al pedo porq no incluia el direccionamiento en todo ese espacio**/
     list-style: none;
     border-bottom: 1px solid grey;
 }
@@ -185,7 +187,7 @@ header .nav-barr a{
 header ul li a:hover{
     background: #C5CAE9;
     color: black;
-    border-radius: 3px;
+     /***********************FLOOR le saque esta wea para numa se le ponga al de la pc y tablet, porq sino queda feo en el celu*****************************************/
 }
 /* navegador-header*/
 
@@ -1094,6 +1096,10 @@ th {
     
         .inicio{
             display: flex;
+        }
+
+        header ul li a:hover{
+            border-radius: 3px; /***********************FLOOR ESTA WEA SERIA NUMA PARA LA VERSION pc NO PARA celu*****************************************/
         }
 
     /******************************inicio home-css min 361, (2/4)******************************/
