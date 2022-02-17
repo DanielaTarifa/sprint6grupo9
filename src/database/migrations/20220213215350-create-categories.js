@@ -9,6 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       categories: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       createdAt: {

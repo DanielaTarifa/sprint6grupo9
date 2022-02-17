@@ -9,12 +9,15 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       pName: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       description: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       duesId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: 'numbersofinstallments',
@@ -22,15 +25,19 @@ module.exports = {
         }
       },
       price: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       img: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       visibility: {
+        allowNull: false,
         type: Sequelize.BOOLEAN
       },
       stcok: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       stockMin: {
@@ -47,6 +54,7 @@ module.exports = {
         }
       },
       categoryId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: 'categories',
