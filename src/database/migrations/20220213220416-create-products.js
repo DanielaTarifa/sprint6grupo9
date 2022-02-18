@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      pName: {
+      name: {
         allowNull: false,
         type: Sequelize.STRING
       },
@@ -36,14 +36,14 @@ module.exports = {
         allowNull: false,
         type: Sequelize.BOOLEAN
       },
-      stcok: {
+      stock: {
         allowNull: false,
         type: Sequelize.INTEGER
       },
       stockMin: {
         type: Sequelize.INTEGER
       },
-      stcokMax: {
+      stockMax: {
         type: Sequelize.INTEGER
       },
       sectionId: {

@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      uName: {
+      name: {
         allowNull: false,
         type: Sequelize.STRING
       },
@@ -27,7 +27,7 @@ module.exports = {
       cel: {
         type: Sequelize.INTEGER
       },
-      uPassword: {
+      password: {
         allowNull: false,
         type: Sequelize.STRING
       },
