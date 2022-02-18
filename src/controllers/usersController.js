@@ -17,6 +17,8 @@ const Rols = db.Rols;
  
 
 const usersController={
+    
+    
     register:(req,res)=>{
 
         return res.render('users/register');

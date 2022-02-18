@@ -12,8 +12,11 @@ const { Op } = require("sequelize")
 const Products = db.Products;
 const Categories = db.Categories;
 const Numbersofinstallments = db.Numbersofinstallments;
-const Sections = db.Sections
+const Sections = db.Sections;
+
 const productController={
+
+
     all:(req,res)=>{
         let productos =product.all();
         res.render('./products/index',{productos:productos,mil:toThousand})
