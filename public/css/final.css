@@ -23,8 +23,6 @@ header .primero{
     flex-wrap: wrap ;
     background: #C5CAE9;
     justify-content: center;
-    border: solid 1px;
-    border-color: #BDBDBD;
     width: 100%;
     padding: 3px;
 }
@@ -87,6 +85,7 @@ header .form0{
 /*hamburgesa menu*/
 div.burger-menu{
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .burger-menu2{
@@ -136,9 +135,7 @@ display: none;
     display: block;
     background:#3F51B5 ;
     margin: 0;
-    /*padding: 10px;**esto hacia mas grande el boton pero pos eso grande era al pedo porq no incluia el direccionamiento en todo ese espacio**/
     list-style: none;
-    border-bottom: 1px solid grey;
 }
 
 /*Estilo cuando el mouse pasa encima de cada link del menu*/
@@ -152,7 +149,7 @@ div.burger-menu i {
     color: #FFF;
     font-size: 20px;
     height: 40px;
-    margin: 10px 0px 20px 0px;
+    margin: 10px 0px 10px 0px;
     padding: 10px;
     width: 40px;
 }
@@ -185,9 +182,8 @@ header .nav-barr a{
 }
 
 header ul li a:hover{
-    background: #C5CAE9;
-    color: black;
-     /***********************FLOOR le saque esta wea para numa se le ponga al de la pc y tablet, porq sino queda feo en el celu*****************************************/
+    background: #5c6fdb;
+    color: white;
 }
 /* navegador-header*/
 
@@ -415,7 +411,6 @@ justify-content: space-between;
     font-family: 'Zen Kurenaido', sans-serif;
     font-weight: bold;
 }
-/*avisos  de abajo*/
 /******************************fin login- css(1/2)*****************************/
 
 /******************************inicio perfil- css(1/1)*****************************/
@@ -591,7 +586,6 @@ table {
 /******************************productsCart- css(1/2)******************************/
 
 /*****************************productDetail- css(1/5)*********************************/
-
 /*Producto detallado principal*/
 .container{
     display: flex;
@@ -624,7 +618,7 @@ table {
     background-color: #fff;
     z-index: 1;
     padding: 18px 18px; 
-height: 476px;
+    height: 476px;
     box-shadow: 15px 0 35px rgba(0, 0, 0, 0.1),
     0 -15px 35px rgba(0, 0, 0, 0.1),
     0 15px 35px rgba(0, 0, 0, 0.1);
@@ -714,13 +708,12 @@ height: 476px;
 /*caja de subtitulo*/
 .subtitulo {
     display: flex;
-    position: relative;
     padding: 5px;
-    justify-content: space-evenly;
     font-family: 'Zen Kurenaido', sans-serif;
 }
 .subtitulo h2{
-    margin-right:50% ;
+    padding: 5px;
+    margin: 1%;
     font-weight: bold;
     font-size: 30px;
 }
@@ -752,11 +745,9 @@ main section h3{
     font-family: 'Zen Kurenaido', sans-serif;
     font-size: 37 px;
 }
-
 /*****************************fin productDetail- css(1/5)*********************************/
 
 /*****************************inicio recuperar- css(1/2)*********************************/
-
 .main-recuperar{
     display: flex;
     justify-content: center;
@@ -930,9 +921,6 @@ margin:auto;
     margin: 10%;
 }
 .regist:hover {background-color: #a0a7cf; border-radius: 3px;}
-/*avisos  de abajo*/
-
-/*register- ccs*/
 /*****************************fin register- css(1/1)*********************************/
 
 /*****************************inicio resumen- css(1/2)*********************************/
@@ -1008,7 +996,6 @@ th {
 .productos img{
     height: 100px;
 }
-
 .productos i {
     width: 100px;
     height: 100px;
@@ -1049,7 +1036,6 @@ th {
     display: flex;
     justify-content: center;
 }
-/*botn responsive*/
 
 /*table*/
 .table11, .table44{
@@ -1099,7 +1085,7 @@ th {
         }
 
         header ul li a:hover{
-            border-radius: 3px; /***********************FLOOR ESTA WEA SERIA NUMA PARA LA VERSION pc NO PARA celu*****************************************/
+            border-radius: 3px;
         }
 
     /******************************inicio home-css min 361, (2/4)******************************/
@@ -1131,7 +1117,6 @@ th {
     /*recuperar- ccs*/
 }
 
-
 @media (min-width: 769px){
 
     /*parte header */
@@ -1152,7 +1137,6 @@ th {
         min-width: 60%;
     }
     /*parte header */
-
 
     /******************************inicio home-css, min-769, (3/4)******************************/
     .main-home section div.products article{
@@ -1671,7 +1655,7 @@ background-color:rgb(216, 17, 17);
     font-weight: bolder;
 }
 
-/********carrousel flor sin arrobas medias resposive *****/
+/********carrousel sin arrobas medias resposive *****/
 .carrousel{
     margin: 100px;
     width: 100%;
@@ -1720,120 +1704,4 @@ div.carrousel li {
     width: 100%;
     list-style: none;
 }
-
 /**********************************CARRUCEL***********************************
-#contentItemCarrucel{
-    /*border: 5PX solid black;
-    height: 550px;
-    overflow: hidden;
-}
-
-.itemCarrucel{/*elemento padre
-    /*border: 1px solid black;
-    height: 100%;
-    position: relative;
-}
-.tarjetaCarrucel{
-    height: 100%;
-}
-.flechasCarrucel{
-    /*background-color: #6273b8;****sino lo saco lo pinta todo****
-    
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;/*centrar desde eje y
-    justify-content: space-between;
-    padding: 20px;
-}
-
-/** como ya tiene imagen no es necesario esto, igual no afecta en nada
-#tarjetaCarrucel-1{
-    background-color: #5ecef0;
-}
-
-#tarjetaCarrucel-2{
-    background-color: #f05e83;
-}
-
-#tarjetaCarrucel-3{
-    background-color: #bec92b;
-}
-**
-.aCarrucel{
-    text-decoration: none; /*saca la linea azul de link
-}
-
-.flechasCarrucel i{
-    color: white;
-    font-size: 38px; /*agranda las flechas
- {
-
-#contenPuntos{
-    /*background-color: #666;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-#contenPuntos > a{ /*solo afecta a las 'a' contenidas en #contenPuntos
-    font-size: 1em;
-    text-decoration: none;
-    color:#3F51B5;
-}
-
-#contenPuntos > a :hover{
-    color:#070707;
-}
-
-.tarjetaCarrucel img{
-    width: 100%;
-    height: 100%;
-}
-
-@media (max-width: 769px){
-    #contentItemCarrucel{
-        /*border: 5PX solid black;
-        height: 280px;
-        width: 100%;
-        overflow: hidden;
-    }
-    .flechasCarrucel i{
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 500px){
-    #contentItemCarrucel{
-        /*border: 5PX solid black;
-        height: 180px;
-        width: 100%;
-        overflow: hidden;  
-    }
-}
-
-@media (max-width: 280px){
-    #contentItemCarrucel{
-        /*border: 5PX solid black;
-    display: none;
-    }
-    #contenPuntos{
-        display: none;
-    }
-    .brCarrrucel{
-        display: none;
-    }
-}
-@media (max-width: 280px){
-    #contentItemCarrucel{
-       display: none;
-    }
-    #contenPuntos{
-        display: none;
-    }
-    .brCarrrucel{
-        display: none;
-    }
-}
-/**********************************CARRUCEL***********************************/
