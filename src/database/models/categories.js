@@ -20,10 +20,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Categories.init({
-    categories: DataTypes.STRING
+    name: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Categories',//alias
+    modelName: 'Categories',
   });
   return Categories;
 };

@@ -16,31 +16,46 @@
                 <div class="Background">
                     
 
-                    <img src="/img/<%=producto.imagen%> " alt="pc" >
+                    <img src="/img/<%=producto.img%>" alt="pc" >
             
                 </div>
                 <div class="info">
                     <div class="name">
                         <div>
-                            <h1><%=producto.nombre%></h1>
+                            <h1><%=producto.name%></h1>
                         </div>
                     </div>
                     <div class="description">
                         <h3 class="title">ESPECIFICACIONES</h3>
-                        <p class="text"><%=producto.descripcion%>
+                        <p class="text"><%=producto.description%>
                         </p>
                     </div>
                 
                     <div class="size-container">
-                        <h3 class="title"><%=producto.cuotas%></h3> 
+                        <% for( let cuota of cuotas ) { %>
+                            <% if (cuota.id == producto.duesId) { %>
+                                <h3 class="title" >Cuotas: <%= cuota.name%></h3>
+                                <p>Precio en cuotas:  <%=parseInt(producto.price/cuota.name)%> </p>
+                                
+                            <% } %>
+                            
+                        <% } %>
+                        
                     </div>
+                    <div>
+                        <p>Disponibles:
+                            <%= producto.stock %> 
+                        </p>
+                    </div>
+                    
                     <div class="buy-price">
                         <a class="buy"></a>
                         <div class="price22">
                             <button class="botoneDetail" type="submit"><a  class="letradetail" href="/ProductCart">Agregar a carrito</a> </button>
                             
                             <i class="fas fa-dollar-sign"></i>
-                            <h1><%=mil(producto.precio)%></h1>
+                            <h1>Precio TOTAL: <%=mil(producto.price)%></h1>
+
                         </div>
                     </div>
                 </div>
@@ -49,30 +64,35 @@
 
         <div class="caja2">
 
-            <div class="subtitulo">
-                <h2>También te puede interesar</h2>
+            
+            <h3>OFERTAS</h3>
+            <div class="products">
+                <% for(let producto of productos){ %>
+                    <!--let (uno de esos muchos, callback) of (muchos)-->
+                    <% if (producto.visibility == 1) { %>
+                        <% if (producto.sectionId == 1) { %>
+                        <article>
+                            <div class="imagenes">
+                                <a href="#"> <img src="/img/<%=producto.img%>" alt="producto" width="360" class="product_img"></a>
+                            </div>
+                            <div class="main-article">
+                                                    
+                            <p class="price"><%=mil(producto.price)%></p>
+                            <p class="discount">Envío Gratis</p>
+                            <h3 class="description"><%=producto.name%></h3>
+                            <button class="botone3"><a href="/ProductDetail/<%=producto.id%>" class="letra3">Ver más </a></button>
+                            
+                            
+                                </div>
+                            </article>
+                        <% } %>
+                                            
+                    <% } %>
+                                        
+                <%} %> 
             </div>
+            
 
-<!-- </body> -->
-
-    <div class="products">
-        <% for(let producto of productos){ %>
-            <% if(producto.categoria=="interes"){%>
-        <article>
-            <div class="imagenes">
-                <img src="/img/<%=producto.imagen%>" alt="producto" width="360" class="product_img">
-            </div>
-            <div class="main-article">
-                
-                <p class="price"><%=mil(producto.precio)%></p>
-                <p class="discount">Envío Gratis</p>
-                <h3 class="description"><%=producto.nombre%></h3>
-                <button class="botone3"><a href="/ProductDetail/<%=producto.id%>" class="letra3">Ver más </a></button>
-            </div>
-        </article>
-        <%} %> 
-        <%} %> 
-    </div>
     </section>
     </main>
     <br>

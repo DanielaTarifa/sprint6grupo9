@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       // belongsTo
       Products.belongsTo(models.Numbersofinstallments, {
-        as: "duesNumbers",
+        as: "duesNumbers",//para el include
         foreignKey: 'duesId'
         
       });

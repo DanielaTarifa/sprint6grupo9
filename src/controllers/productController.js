@@ -6,7 +6,9 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const path = require('path');
 let db = require('../database/models');
 const sequelize = db.sequelize;
-const { Op } = require("sequelize")
+const { Op, where } = require("sequelize");
+const { buildCheckFunction } = require('express-validator');
+const { createConnection } = require('net');
 
 //una forma de llamar a modelos de la carpeta models
 const Products = db.Products;
@@ -16,61 +18,58 @@ const Sections = db.Sections;
 
 const productController={
 
-
-    all:(req,res)=>{
-        let productos =product.all();
-        res.render('./products/index',{productos:productos,mil:toThousand})
-    },
-    alls:(req,res)=>{
-        let productos =product.all();
-        res.render('./products/allproducts',{productos:productos,mil:toThousand})
-    },
-    todos:(req,res)=>{
-        let productos =product.all();
-        res.render('./products/todos',{productos:productos,mil:toThousand})
-    },
-    index: (req, res)=> {
-        res.render('./products/index')
-    },
+    
     edit:(req, res)=> {
-        let id=req.params.id;
-        let producto=product.find(id);
-        res.render('./products/editProduct',{producto})
+        let pedidoProducto=Products.findByPk(req.params.id);
+
+        let promesaCuotas= Numbersofinstallments.findAll();
+        let promesaSections= Sections.findAll();
+        let promesaCategories= Categories.findAll();
+        
+        Promise.all([pedidoProducto, promesaCuotas, promesaSections, promesaCategories])
+        .then(function([ producto, cuotas, secciones, categorias]) {
+            
+            res.render('./products/editProduct', {producto:producto, cuotas:cuotas, secciones:secciones, categorias:categorias})})
+        .catch(error => res.send(error))
+
     },
-    add: (req,res)=>{
-        res.render('./products/productAdd')
+    update:(req, res)=> {
+        Products.update({
+            name:req.body.nombre,
+            description:req.body.descripcion,
+            duesId:req.body.cuotas,
+            price:req.body.precio,
+            img:req.file.filename,
+            visibility:req.body.visualizacion,
+            stock:req.body.stock,
+            stockMin:req.body.stockMinimo,
+            stockMax:req.body.stockMaximo,
+            sectionId:req.body.seccion,
+            categoryId:req.body.categoria,
+        },{
+            where:{
+                id:req.params.id
+            }
+        })
+        .then(()=>{
+            res.redirect("/")
+        })
+        .catch(error => res.send(error))
+
     },
-    create:(req,res)=>{
-        let producto={
-            nombre:req.body.nombre,
-            descripcion:req.body.descripcion,
-            cuotas:"COMPRALO EN 12 CUOTAS DE $"+req.body.cuotas,
-            precio:Number(req.body.precio),
-            imagen:req.file.filename,
-            categoria:req.body.categoria
-        };
-        product.create(producto);
-        res.redirect("/");
-    },
-    detail:function (req,res) {
-        let id=req.params.id;
-        let producto=product.find(id);
-        let productos =product.all();
-        res.render('./products/productDetail',{producto,mil:toThousand,productos:productos})
-    },
-    editar:(req,res)=>{
-        let img=product.find(req.params.id);
-        let producto={
-            id:req.params.id,
-            nombre:req.body.nombre,
-            descripcion:req.body.descripcion,
-            cuotas:"COMPRALO EN 12 CUOTAS DE $"+req.body.cuotas,
-            precio:Number(req.body.precio),
-            imagen:req.file!=null?req.file.filename:img.imagen,
-            categoria:req.body.categoria
-        };
-        product.update(producto);
-        res.redirect("/allproducts")
+    detail:(req,res)=>{
+        let pedidoProducto= Products.findByPk(req.params.id);
+        let pedidoListas= Products.findAll();
+        let promesaCuotas= Numbersofinstallments.findAll();
+        let promesaSections= Sections.findAll();
+        let promesaCategories= Categories.findAll();
+        
+        Promise.all([pedidoProducto, pedidoListas, promesaCuotas, promesaSections, promesaCategories])
+        .then(function([ producto, productos, cuotas, secciones, categorias]) {
+            
+            res.render('./products/productDetail', {producto:producto, productos:productos, cuotas:cuotas, secciones:secciones, categorias:categorias, mil:toThousand})
+        })
+        .catch(error => res.send(error))    
     },
     cart: (req,res)=>{
         res.render('./products/productCart')
@@ -79,9 +78,15 @@ const productController={
         res.render('./products/resumen')
     },
     delete:(req,res)=>{
-        product.delete(req.params.id);
+        Products.destroy({
+            where:{
+                id:req.params.id
+            }
+        })
         res.redirect("/allproducts");
     }
+    
 }
 
 module.exports=productController;
+

@@ -17,7 +17,6 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'rolId'
         
       });
-
     }
   }
   Users.init({

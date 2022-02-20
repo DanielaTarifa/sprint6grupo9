@@ -97,46 +97,56 @@
             <div class="products">
                 <%  let i=0%>
                 <% for(let producto of productos){ %>
-                    
-                    <% if(producto.categoria=="destacados"){%>
+                    <!--let (uno de esos muchos, callback) of (muchos)-->
+                    <% if (producto.visibility == 1 ) { %>
+                        <% if (producto.sectionId == 2) { %>
+                            <article>
+                                <div class="imagenes">
+                                    <a href="#"> <img src="/img/<%=producto.img%>" alt="producto" width="360" class="product_img"></a>
+                                </div>
+                                <div class="main-article">
+                                                        
+                                <p class="price"><%=mil(producto.price)%></p>
+                                <p class="discount">Envío Gratis</p>
+                                <h3 class="description"><%=producto.name%></h3>
+                                <button class="botone3"><a href="/ProductDetail/<%=producto.id%>" class="letra3">Ver más </a></button>
+                                
+                                
+                                    </div>
+                                </article>
+                        <% } %>
                         
-                <article>
-                    <div class="imagenes">
-                        <a href="#"> <img src="/img/<%=producto.imagen%>" alt="producto" width="360" class="product_img"></a>
-                    </div>
-                    <div class="main-article">
-                        
-                        <p class="price"><%=mil(producto.precio)%></p>
-                        <p class="discount">Envío Gratis</p>
-                        <h3 class="description"><%=producto.nombre%></h3>
-                        <button class="botone3"><a href="/ProductDetail/<%=producto.id%>" class="letra3">Ver más </a></button>
-                    </div>
-                </article>
+                                            
+                    <% } %>
+                                        
+                <%} %> 
                 
-                <%} %> 
-                <%if (i>3){  %>               
-                    <%break %> 
-                    <% } %> 
-                    <%i++%> 
-                <%} %> 
+                 
             </div>
             <h3>OFERTAS</h3>
             <div class="products">
                 <% for(let producto of productos){ %>
-                    <% if(producto.categoria=="ofertas"){%>
-                <article>
-                    <div class="imagenes">
-                        <a href="#"> <img src="/img/<%=producto.imagen%>" alt="producto" width="360" class="product_img"></a>
-                    </div>
-                    <div class="main-article">
-                        
-                        <p class="price"><%=mil(producto.precio)%></p>
-                        <p class="discount">Envío Gratis</p>
-                        <h3 class="description"><%=producto.nombre%></h3>
-                        <button class="botone3"><a href="/ProductDetail/<%=producto.id%>" class="letra3">Ver más </a></button>
-                    </div>
-                </article>
-                <%} %> 
+                    <!--let (uno de esos muchos, callback) of (muchos)-->
+                    <% if (producto.visibility == 1) { %>
+                        <% if (producto.sectionId == 1) { %>
+                        <article>
+                            <div class="imagenes">
+                                <a href="#"> <img src="/img/<%=producto.img%>" alt="producto" width="360" class="product_img"></a>
+                            </div>
+                            <div class="main-article">
+                                                    
+                            <p class="price"><%=mil(producto.price)%></p>
+                            <p class="discount">Envío Gratis</p>
+                            <h3 class="description"><%=producto.name%></h3>
+                            <button class="botone3"><a href="/ProductDetail/<%=producto.id%>" class="letra3">Ver más </a></button>
+                            
+                            
+                                </div>
+                            </article>
+                        <% } %>
+                                            
+                    <% } %>
+                                        
                 <%} %> 
             </div>
 

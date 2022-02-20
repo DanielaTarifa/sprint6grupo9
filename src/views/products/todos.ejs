@@ -15,20 +15,22 @@
             
             <h3>Todos los productos</h3>
             <div class="products">
-                <% for(let producto of productos){ %>
-
-                <article>
-                    <div class="imagenes">
-                        <a href="#"> <img src="/img/<%=producto.imagen%>" alt="producto" width="360" class="product_img"></a>
-                    </div>
-                    <div class="main-article">
-                        
-                        <p class="price"><%=mil(producto.precio)%></p>
-                        <p class="discount">Envío Gratis</p>
-                        <h3 class="description"><%=producto.nombre%></h3>
-                        <button class="botone3"><a href="/ProductDetail/<%=producto.id%>" class="letra3">Ver más </a></button>
-                    </div>
-                </article>
+                <% for(let producto of listadoClientProduct){ %>
+                    <% if (producto.visibility == 1) { %>
+                        <article>
+                            <div class="imagenes">
+                                <a href="#"> <img src="/img/<%=producto.img%>" alt="producto" width="360" class="product_img"></a>
+                            </div>
+                            <div class="main-article">
+                                
+                                <p class="price"><%=mil(producto.price)%></p>
+                                <p class="discount">Envío Gratis</p>
+                                <h3 class="description"><%=producto.name%></h3>
+                                <button class="botone3"><a href="/ProductDetail/<%=producto.id%>" class="letra3">Ver más </a></button>
+                            </div>
+                        </article>
+                    <% } %>
+                
                 
                 <%} %> 
             </div>

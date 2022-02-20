@@ -19,11 +19,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Rols.init({
-    rol: DataTypes.STRING
+    name: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Rols',
   });
   return Rols;
 };
-

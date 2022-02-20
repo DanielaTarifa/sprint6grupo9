@@ -9,30 +9,74 @@
 <div class="main-product-add0">
     <main class="main-product-add">
         <div class="formulario-add">
-        <form action="/agregarProducto" method="POST" enctype="multipart/form-data">
-            <h2>Agregar nuevo producto</h2>
+                <form action="/agregarProducto" method="POST" enctype="multipart/form-data">
+                    <h2>Agregar nuevo producto</h2>
+                    
+                <label for="name">Nombre del Producto</label>
+                <br>
+                <input class="rellenoAdd" type="text" name="nombre" id="nombre" placeholder=" " required>
+                <br>
+                <label for="price">Precio</label>
+                <input  class="rellenoAdd"type="number" name="precio" id="precio" required>
+        <br>
+        <label for="categorias">Categoría</label>
+        <select name="categorias" >
+            <% for( let i = 0; i < categorias.length; i++ ) { %>
             
-        <label for="name">Nombre del Producto</label>
+            <option value="<%= categorias[i].id %> ">
+                <%= categorias[i].name %> 
+            </option>
+            <% } %>
+        </select>
+                <!-- <input  class="rellenoAdd" type="text" name="categoria" id="categoria" required>-->
         <br>
-         <input class="rellenoAdd" type="text" name="nombre" id="nombre" placeholder=" " required>
+                <label for="category">Descripcion</label>
+                <textarea  class="rellenoAddDescrition" name="descripcion" id="descripcion" cols="10" rows="5" required></textarea>
         <br>
-         <label for="price">Precio</label>
-        <input  class="rellenoAdd"type="number" name="precio" id="precio" required>
-<br>
-        <label for="category">Categoría</label>
-        <input  class="rellenoAdd" type="text" name="categoria" id="categoria" required>
+                <label for="imagen">Selecciona una imagen</label>
+                <input class="rellenoAdd" type="file" name="imagen" id="imagen" required>
+                
         <br>
-        <label for="category">Descripcion</label>
-        <textarea  class="rellenoAddDescrition" name="descripcion" id="descripcion" cols="10" rows="5" required></textarea>
-<br>
-        <input class="rellenoAdd" type="file" name="imagen" id="imagen" required>  
-
-        <label for="cuotas">Precio 12 cuotas</label>
-        <input class="rellenoAdd" type="number" name="cuotas" id="cuotas" required>
-        <button class="botonAdd" type="submit">Agregar</button>
-        </form>
-  
-    </div>
+                <label for="cuotas">Cuotas</label>
+                <select name="cuotas" >
+                    <% for( let i = 0; i < cuotas.length; i++ ) { %>
+                    <option value="<%= cuotas[i].id %>">
+                        <%= cuotas[i].name %> 
+                    </option>
+                    <% } %>
+                </select>
+        <br>
+                
+                <label for="stock">stock</label>
+                <input  class="rellenoAdd"type="number" name="stock" id="stock" required>
+        <br>
+                <label for="stockMinimo">stock minimo</label>
+                <input  class="rellenoAdd"type="number" name="stockMinimo" id="stockMinimo" required>
+        <br>
+                <label for="stockMaximo">stock máximo</label>
+                <input  class="rellenoAdd"type="number" name="stockMaximo" id="stockMaximo" required>
+        <br>
+                <label for="secciones">Sección</label>
+                <!-- <input  class="rellenoAdd" type="number" name="seccion" id="seccion">-->
+                
+                <select name="secciones" >
+                    <% for( let i = 0; i < secciones.length; i++ ) { %>
+                        <option value="<%= secciones[i].id %>">
+                            <%= secciones[i].name %> 
+                        </option>
+                        <% } %>
+                </select>
+        <br>
+        <label for="visualizacion">Visualizacón</label>
+        <br>
+                <input  type="radio" name="visualizacion" id="visualizacion" value="1" required>si
+                <input  type="radio" name="visualizacion" id="visualizacion" value="0"required>no
+                <br>
+                <!-- <input class="rellenoAdd" type="number" name="cuotas" id="cuotas" required>-->
+                <button class="botonAdd" type="submit">Agregar</button>
+                </form>
+        
+        </div>
     </main>
 </div>
     <%- include('../partials/footer') %> 

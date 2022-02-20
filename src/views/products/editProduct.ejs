@@ -10,20 +10,90 @@
 
             <form action="/editarProducto/<%=producto.id%>?_method=put " method="POST" enctype="multipart/form-data">
                 <label for="name">Nombre del Producto</label>
-                 <input class="rellenoAdd" type="text" name="nombre" id="nombre" value="<%=producto.nombre%>" >
+                 <input class="rellenoAdd" type="text" name="nombre" id="nombre" value="<%=producto.name%>" >
                 <br>
                  <label for="price">Precio</label>
-                <input  class="rellenoAdd"type="number" name="precio" id="precio" value="<%=producto.precio%>" >
+                <input  class="rellenoAdd"type="number" name="precio" id="precio" value="<%=producto.price%>" >
+        <br> 
+        <label for="categorias">Categoría</label>
+        <select name="categorias" >
+            <% for( let i = 0; i < categorias.length; i++ ) { %>
+
+                <% if (categorias[i].id == producto.categoryId) { %>
+                    <option value="<%= categorias[i].id %> " selected>
+                        <%= categorias[i].name %> 
+                    </option>
+                <% } else{ %>
+
+                    <option value="<%= categorias[i].id %> ">
+                        <%= categorias[i].name %> 
+                    </option>
+                <% } %>
+            <% } %>
+        </select>
+                <!-- <input  class="rellenoAdd" type="text" name="categoria" id="categoria" required>-->
         <br>
-                <label for="category">Categoría</label>
-                <input  class="rellenoAdd" type="text" name="categoria" id="categoria" value="<%=producto.categoria%>" >
-                <label for="category">Descripcion</label>
-                <textarea  class="rellenoAddDescrition" name="descripcion" id="descripcion" cols="10" rows="5" ><%=producto.descripcion%></textarea>
+                <label for="descripcion">Descripcion</label>
+                <input  class="rellenoAddDescrition" type="text" name="descripcion" id="descripcion" cols="10" rows="5"  value="<%=producto.description%>" required></input>
         <br>
-                <input class="rellenoAdd" type="file" name="imagen" id="imagen" >  
+                <label for="imagen">Selecciona una imagen</label>
+                <input class="rellenoAdd"  type="file" name="imagen" id="imagen" value="<%=producto.img%>" required>
+                
         <br>
-                <label for="cuotas">Precio 12 cuotas</label>
-                <input class="rellenoAdd" type="number" name="cuotas" id="cuotas" value="<%=Number(producto.cuotas.slice(26))%>" >
+                <label for="cuotas">Cuotas</label>
+                <select name="cuotas" >
+                    <% for( let i = 0; i < cuotas.length; i++ ) { %>
+                        <% if (cuotas[i].id == producto.duesId) { %>
+                            <option value="<%= cuotas[i].id %>" selected>
+                                <%= cuotas[i].name %> 
+                            </option>
+                        <% } else { %>
+                            <option value="<%= cuotas[i].id %>">
+                                <%= cuotas[i].name %> 
+                            </option>
+                        <% } %>
+                    <% } %>
+                </select>
+        <br>
+                
+                <label for="stock">stock</label>
+                <input  class="rellenoAdd"type="number" name="stock" id="stock" value="<%=producto.stock%>" required>
+        <br>
+                <label for="stockMinimo">stock minimo</label>
+                <input  class="rellenoAdd"type="number" name="stockMinimo" id="stockMinimo" value="<%=producto.stockMin%>" required>
+        <br>
+                <label for="stockMaximo">stock máximo</label>
+                <input  class="rellenoAdd"type="number" name="stockMaximo" id="stockMaximo" value="<%=producto.stockMax%>" required>
+        <br>
+                <label for="secciones">Sección</label>
+                <!-- <input  class="rellenoAdd" type="number" name="seccion" id="seccion">-->
+                
+                <select name="secciones" >
+                    <% for( let i = 0; i < secciones.length; i++ ) { %>
+                        <% if (secciones[i].id == producto.sectionId) { %>
+                            <option value="<%= secciones[i].id %>" selected>
+                                <%= secciones[i].name %> 
+                            </option>
+                        
+                        <% } else { %>
+                            <option value="<%= secciones[i].id %>">
+                                <%= secciones[i].name %> 
+                            </option>
+                        <% } %>
+                    <% } %>
+                </select>
+        <br>
+        <label for="visualizacion">Visualizacón</label>
+        <br>
+        <% if (producto.visibility == 1) { %>
+            <input  type="radio" name="visualizacion" id="visualizacion" value="1" checked required>si
+            <input  type="radio" name="visualizacion" id="visualizacion" value="0"required>no
+        <% }else{ %>
+            <input  type="radio" name="visualizacion" id="visualizacion" value="1" required>si
+            <input  type="radio" name="visualizacion" id="visualizacion" value="0" checked required>no
+        <% } %>
+                
+                <br>
                 <button class="botonAdd" type="submit">Editar</button>
                 </form>
 
