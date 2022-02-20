@@ -84,8 +84,73 @@ const productController={
             }
         })
         res.redirect("/allproducts");
-    }
-    
+    },
+
+    all:(req,res)=>{
+        
+        let productos =Products.findAll()
+        .then(function(productos){
+            res.render('./products/index',{productos:productos,mil:toThousand})
+        })
+        
+    },
+    listAdmi:(req,res)=>{//listado para los admi
+        let listadoAdmi= Products.findAll()
+        .then(function(listadoAdmi) {
+            
+            res.render('./products/allproducts',{listadoAdmi:listadoAdmi,mil:toThousand})})
+        .catch(error => res.send(error))
+    },
+
+    /*search:(req, res)=>{
+        let search= req.query.barra;
+        let products= Products.findAll({
+            where:{
+                name: { [Op.like] : '%' + search + '%' }
+            },
+            include : ['duesNumbers','category', 'section']
+        })
+        console.log("RESULTADO: " + products.length);
+    },*/
+/*
+    index: (req, res)=> {
+        res.render('./products/index')
+    },*/
+    add:(req, res)=>{
+        let promesaCuotas= Numbersofinstallments.findAll();
+        let promesaSections= Sections.findAll();
+        let promesaCategories= Categories.findAll();
+        
+        Promise.all([promesaCuotas, promesaSections, promesaCategories])
+        .then(function([ cuotas, secciones, categorias]) {
+            console.log(cuotas);
+            console.log(secciones);
+            console.log(categorias);
+            res.render('./products/productAdd', {cuotas:cuotas, secciones:secciones, categorias:categorias})})
+            .catch(error => res.send(error))
+        
+        },
+        create:(req,res)=>{
+            console.log(req.file.filename)
+                Products.create({
+                    name:req.body.nombre,
+                    description:req.body.descripcion,
+                    duesId:req.body.cuotas,
+                    price:req.body.precio,
+                    img:req.file.filename,
+                    visibility:req.body.visualizacion,
+                    stock:req.body.stock,
+                    stockMin:req.body.stockMinimo,
+                    stockMax:req.body.stockMaximo,
+                    sectionId:req.body.secciones,
+                    categoryId:req.body.categorias,
+                })
+                .then(()=>{
+                    res.redirect('/');
+                })
+                    
+                .catch(error => res.send(error))
+            },
 }
 
 module.exports=productController;
