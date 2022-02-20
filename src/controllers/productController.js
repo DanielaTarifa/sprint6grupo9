@@ -101,7 +101,13 @@ const productController={
             res.render('./products/allproducts',{listadoAdmi:listadoAdmi,mil:toThousand})})
         .catch(error => res.send(error))
     },
-
+    listClient:(req,res)=>{//listado para los clientes
+        let listadoClientProduct= Products.findAll()
+        .then(function(listadoClientProduct) {
+            
+            res.render('./products/todos',{listadoClientProduct:listadoClientProduct,mil:toThousand})})
+        .catch(error => res.send(error))
+    },
     /*search:(req, res)=>{
         let search= req.query.barra;
         let products= Products.findAll({
@@ -112,10 +118,11 @@ const productController={
         })
         console.log("RESULTADO: " + products.length);
     },*/
-/*
+    /*
     index: (req, res)=> {
         res.render('./products/index')
     },*/
+    
     add:(req, res)=>{
         let promesaCuotas= Numbersofinstallments.findAll();
         let promesaSections= Sections.findAll();
@@ -127,30 +134,34 @@ const productController={
             console.log(secciones);
             console.log(categorias);
             res.render('./products/productAdd', {cuotas:cuotas, secciones:secciones, categorias:categorias})})
-            .catch(error => res.send(error))
-        
-        },
-        create:(req,res)=>{
-            console.log(req.file.filename)
-                Products.create({
-                    name:req.body.nombre,
-                    description:req.body.descripcion,
-                    duesId:req.body.cuotas,
-                    price:req.body.precio,
-                    img:req.file.filename,
-                    visibility:req.body.visualizacion,
-                    stock:req.body.stock,
-                    stockMin:req.body.stockMinimo,
-                    stockMax:req.body.stockMaximo,
-                    sectionId:req.body.secciones,
-                    categoryId:req.body.categorias,
-                })
-                .then(()=>{
-                    res.redirect('/');
-                })
-                    
-                .catch(error => res.send(error))
-            },
+        .catch(error => res.send(error))
+    
+    },
+    create:(req,res)=>{
+        console.log(req.file.filename)
+            Products.create({
+                name:req.body.nombre,
+                description:req.body.descripcion,
+                duesId:req.body.cuotas,
+                price:req.body.precio,
+                img:req.file.filename,
+                visibility:req.body.visualizacion,
+                stock:req.body.stock,
+                stockMin:req.body.stockMinimo,
+                stockMax:req.body.stockMaximo,
+                sectionId:req.body.secciones,
+                categoryId:req.body.categorias,
+            })
+            
+            
+ 
+            
+        .then(()=>{
+            res.redirect('/');
+        })
+            
+        .catch(error => res.send(error))
+    }
 }
 
 module.exports=productController;
