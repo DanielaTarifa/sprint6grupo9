@@ -15,7 +15,6 @@ const { Op } = require("sequelize");
 const Users = db.Users;
 const Rols = db.Rols;
  
-
 const usersController={
     register:(req,res)=>{
         
@@ -118,9 +117,9 @@ const usersController={
 
     destroy: (req, res) =>{
         let userId = req.params.id;
-        User.destroy({where: {id: userId}, force: true}) // force: true es para asegurar que se ejecute la acción
+        Users.destroy({where: {id: userId}, force: true}) // force: true es para asegurar que se ejecute la acción
         .then(()=>{
-            return res.redirect('/users')})
+            return res.redirect('/')})
         .catch(error => res.send(error)) 
     },
 

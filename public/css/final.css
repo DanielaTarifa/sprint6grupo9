@@ -1197,14 +1197,9 @@ th {
     /******************************fin home-css, max-900, (4/4)******************************/
 
 .formulario-add{
-    display: flex;
     color: black;
-    font-family: 'Zen Kurenaido', sans-serif;
-    font-size: 20px;
     font-weight: bold;
-    flex-direction: column;
-    padding: 10px;
-    margin-bottom: 7%;
+    margin-bottom: 8%;
 }
 
 .main-login{
@@ -1609,9 +1604,10 @@ th {
     display: flex;
     border-radius: 5px;
     width: 100%;
-    height: 35px;/*estaba en 7%*/
+    height: 35px;
     flex-direction: column;
     border: none;
+    margin-bottom: 15px;
 }
 .rellenoAddDescrition{
     display: flex;
@@ -1640,7 +1636,6 @@ margin-top: 20px;
     font-size: 20px;
     flex-direction: column;
     margin-bottom: 80px;
-    padding-bottom: 38px
 }
 #eliminar{
 background-color:rgb(216, 17, 17);

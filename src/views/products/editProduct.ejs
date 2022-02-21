@@ -11,10 +11,10 @@
             <form action="/editarProducto/<%=producto.id%>?_method=put " method="POST" enctype="multipart/form-data">
                 <label for="name">Nombre del Producto</label>
                  <input class="rellenoAdd" type="text" name="nombre" id="nombre" value="<%=producto.name%>" >
-                <br>
+                
                  <label for="price">Precio</label>
                 <input  class="rellenoAdd"type="number" name="precio" id="precio" value="<%=producto.price%>" >
-        <br> 
+        
         <label for="categorias">Categoría</label>
         <select name="categorias" >
             <% for( let i = 0; i < categorias.length; i++ ) { %>
@@ -31,15 +31,16 @@
                 <% } %>
             <% } %>
         </select>
+        
                 <!-- <input  class="rellenoAdd" type="text" name="categoria" id="categoria" required>-->
         <br>
-                <label for="descripcion">Descripcion</label>
-                <input  class="rellenoAddDescrition" type="text" name="descripcion" id="descripcion" cols="10" rows="5"  value="<%=producto.description%>" required></input>
+                <label for="descripcion">Descripción</label>
+                <textarea  class="rellenoAddDescrition" type="text" name="descripcion" id="descripcion" cols="10" rows="5"  value="<%=producto.description%>" required></textarea>
         <br>
                 <label for="imagen">Selecciona una imagen</label>
                 <input class="rellenoAdd"  type="file" name="imagen" id="imagen" value="<%=producto.img%>" required>
                 
-        <br>
+        
                 <label for="cuotas">Cuotas</label>
                 <select name="cuotas" >
                     <% for( let i = 0; i < cuotas.length; i++ ) { %>
@@ -58,13 +59,13 @@
                 
                 <label for="stock">stock</label>
                 <input  class="rellenoAdd"type="number" name="stock" id="stock" value="<%=producto.stock%>" required>
-        <br>
+        
                 <label for="stockMinimo">stock minimo</label>
                 <input  class="rellenoAdd"type="number" name="stockMinimo" id="stockMinimo" value="<%=producto.stockMin%>" required>
-        <br>
+        
                 <label for="stockMaximo">stock máximo</label>
                 <input  class="rellenoAdd"type="number" name="stockMaximo" id="stockMaximo" value="<%=producto.stockMax%>" required>
-        <br>
+    
                 <label for="secciones">Sección</label>
                 <!-- <input  class="rellenoAdd" type="number" name="seccion" id="seccion">-->
                 
@@ -83,7 +84,7 @@
                     <% } %>
                 </select>
         <br>
-        <label for="visualizacion">Visualizacón</label>
+        <label  for="visualizacion">Visualizacón</label>
         <br>
         <% if (producto.visibility == 1) { %>
             <input  type="radio" name="visualizacion" id="visualizacion" value="1" checked required>si

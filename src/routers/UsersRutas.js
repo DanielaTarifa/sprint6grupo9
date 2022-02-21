@@ -40,6 +40,7 @@ router.get('/logout/', userLoggedMiddleware, usersController.logout);// esta bie
 //crud
 router.get('/listar', guestMiddleware ,usersController.listar);
 
+router.get('/borrar/:id', guestMiddleware ,usersController.delete);
 
 
 module.exports= router;
