@@ -24,8 +24,6 @@ router.post('/login', usersController.processLogin);
 
 //formulario de registro
 router.get('/register',guestMiddleware, usersController.register);//esto mi add
-//procesa el registro
-router.post('/register', uploadFile.single('avatar'), validaciones, usersController.processRegister);//esto guarda usuarios
 
 //formulario de recuperar
 router.get('/recuperar', usersController.recover);
@@ -39,7 +37,7 @@ router.get('/logout/', userLoggedMiddleware, usersController.logout);// esta bie
 
 //crud
 router.get('/listar', guestMiddleware ,usersController.listar);
-
+router.post('/register', uploadFile.single('avatar'), validaciones, usersController.processRegister);//agrega usuarios
 router.get('/borrar/:id', guestMiddleware ,usersController.delete);
 
 

@@ -21,7 +21,7 @@ const usersController={
         return res.render('users/register')
     },
 
-    listar:(req,res)=>{//funciona (solo funciona cuando no estas logeado 0.0) arreglar css
+    listar:(req,res)=>{//funciona (solo funciona cuando no estas logeado 0.0) arreglar css y ejs
         Users.findAll()
         .then(listarUsuarios => {
             res.render('users/listar', {listarUsuarios: listarUsuarios})
@@ -29,18 +29,12 @@ const usersController={
 
     },
 
-    listarCliente:(req,res)=>{//(solo funciona cuando no estas logeado 0.0) arreglar css
-        Users.findAll()
-        .then(listarUsuarios => {
-            res.render('users/listar', {listarUsuarios: listarUsuarios})
-        });
-
-    },
+    
    delete: (req, res) =>{
         let userId = req.params.id;
         User.destroy({where: {id: userId}}) 
         .then(()=>{
-            return res.redirect('/users')})
+            return res.redirect('/')})
         .catch(error => res.send(error)) 
     },
     
@@ -55,20 +49,37 @@ const usersController={
         }
 
     //tiene que salir un cartel q ya esta en uso el mail si se repite 2 veces//
-    let userToLogin = Users.findOne({where: {email: req.body.email}});// no anda esta roto
-        if (userInDB){
-            return res.render ('users/register',{
+    let userInDB = db.Users.findAll({where: {email: req.body.email}});
+        
+        if(!userInDB){
+            return res.render('./users/register',{
                 errors:{
-                    email:{
-                    msg: 'este email ya esta registrado'
+                    email :{
+                        msg: 'Este email ya esta registrado'
                     }
                 },
-                oldData: req.body
+                oldData:req.body,
             });
-        }
+        };
+
+        Users.create({
+            name: req.body.nombre,
+            lastname: req.body.apellido,
+            userName: req.body.nombreDeUsuario,
+            email: req.body.email,
+            cel: req.body.tel,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            avatar: req.file.filename,
+            rolId: 1 })
+            .then( () => {
+                return res.redirect('/login');
+            })
+            .catch( error => {
+                return res.send(error);
+            });
         
         //crea nuevos usuarios en json/ 
-        let userToCreate= {
+        /*let userToCreate= {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),
             avatar: req.file.filename,
@@ -77,7 +88,7 @@ const usersController={
 
         let userCreated=  User.create(userToCreate);
 
-        return res.redirect('/login'); //una vez registrado te lleva para que entres x login 
+        return res.redirect('/login'); //una vez registrado te lleva para que entres x login */
     },
     login:( req,res)=>{
         return res.render('users/login');
@@ -114,18 +125,10 @@ const usersController={
         });
 
     },
-
-    destroy: (req, res) =>{
-        let userId = req.params.id;
-        Users.destroy({where: {id: userId}, force: true}) // force: true es para asegurar que se ejecute la acción
-        .then(()=>{
-            return res.redirect('/')})
-        .catch(error => res.send(error)) 
-    },
-
+    
     recover:(req,res)=>{
         return res.render('users/recuperar');
-    },
+    },//esta bien
 
     perfil:(req,res)=>{
         return res.render('users/perfil',{
