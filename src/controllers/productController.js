@@ -153,9 +153,6 @@ const productController={
                 categoryId:req.body.categorias,
             })
             
-            
- 
-            
         .then(()=>{
             res.redirect('/');
         })
@@ -165,4 +162,3 @@ const productController={
 }
 
 module.exports=productController;
-

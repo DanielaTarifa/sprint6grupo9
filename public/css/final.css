@@ -136,6 +136,7 @@ display: none;
     background:#3F51B5 ;
     margin: 0;
     list-style: none;
+    border-bottom: 0.2px solid #5c6fdb
 }
 
 /*Estilo cuando el mouse pasa encima de cada link del menu*/
@@ -1254,6 +1255,9 @@ th {
 .main-resumen{
     padding: 5%;
 }
+.botonAdd{
+    margin-bottom: 40%;
+}
 }
 
 @media screen and (max-width:769px){
@@ -1581,7 +1585,6 @@ th {
     font-size: 20px;
     flex-direction: column;
     padding: 10px;
-    margin-bottom: 80px;
     padding-bottom: 38px;
 }
 .botonAdd{
@@ -1589,8 +1592,8 @@ th {
     background-color: darkcyan;
     justify-content: center;
     border-radius: 5px ; 
-    display: flex; 
     color: white;
+    margin-bottom: 35%;
 }
 .botonAdd:hover{
     background-color: rgb(7, 194, 194);
@@ -1598,7 +1601,6 @@ th {
 }
 
 .botonAdd a {
-    display: flex; 
     color: white;
     text-decoration: none;
 }

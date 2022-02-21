@@ -1,36 +1,5 @@
 [
- {
-  "id": 1,
-  "avatar": "bulma1.jpg",
-  "nombre": "TomÃ¡s",
-  "apellido": "Hurtado",
-  "nombreDeUsuario": "Ruby Kurosawa",
-  "email": "tomas@gmail.com",
-  "tel": 42703014,
-  "password": 123456789
- },
- {
-  "id": 2,
-  "nombre": "tomi",
-  "apellido": "tomas",
-  "nombreDeUsuario": "tomiiiiiiiii",
-  "email": "tomas@tomass.com.ar",
-  "tel": "1160498896",
-  "password": "$2a$10$t7GGLpJyih9jdDSn0iSk9OF40Q.5eOM6jXTPJjw5WziO.csCGy2k.",
-  "avatar": "1643230072076_img.jpg",
-  "rol": "cliente"
- },
- {
-  "id": 3,
-  "nombre": "florencia",
-  "apellido": "canteros",
-  "nombreDeUsuario": "flopifloo",
-  "email": "flor@gmail.com",
-  "tel": "1160498888",
-  "password": "$2a$10$hWB8oETYpbj.XYq32yTzMu4AIVRJFK1qcPDv0lG1pzIPXtqBUuKBq",
-  "avatar": "1643231793615_img.png",
-  "rol": "cliente"
- },
+
  {
   "id": 4,
   "nombre": "usuario",
@@ -42,17 +11,7 @@
   "avatar": "1643290990063_img.jpg",
   "rol": "cliente"
  },
- {
-  "id": 5,
-  "nombre": "floor",
-  "apellido": "canteros",
-  "nombreDeUsuario": "florenciaN",
-  "email": "florN@gmail.com.ar",
-  "tel": "1160498896",
-  "password": "$2a$10$H5qoE6IL9WlzU9F0npqjvO4T.OQdRQsKJAEG0E8zXdNyAlbJwe1pa",
-  "avatar": "1643598853286_img.jpg",
-  "rol": "cliente"
- },
+ 
  {
   "id": 6,
   "nombre": "administrador",

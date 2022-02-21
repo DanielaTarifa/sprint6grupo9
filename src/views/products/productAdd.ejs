@@ -32,12 +32,12 @@
         <br>
                 <label for="category">Descripcion</label>
                 <textarea  class="rellenoAddDescrition" name="descripcion" id="descripcion" cols="10" rows="5" required></textarea>
-        <br>
+       
                 <label for="imagen">Selecciona una imagen</label>
                 <input class="rellenoAdd" type="file" name="imagen" id="imagen" required>
                 
-        <br>
                 <label for="cuotas">Cuotas</label>
+
                 <select name="cuotas" >
                     <% for( let i = 0; i < cuotas.length; i++ ) { %>
                     <option value="<%= cuotas[i].id %>">

@@ -17,12 +17,34 @@ const Rols = db.Rols;
  
 
 const usersController={
-    
-    
     register:(req,res)=>{
-
-        return res.render('users/register');
+        
+        return res.render('users/register')
     },
+
+    listar:(req,res)=>{//funciona (solo funciona cuando no estas logeado 0.0) arreglar css
+        Users.findAll()
+        .then(listarUsuarios => {
+            res.render('users/listar', {listarUsuarios: listarUsuarios})
+        });
+
+    },
+
+    listarCliente:(req,res)=>{//(solo funciona cuando no estas logeado 0.0) arreglar css
+        Users.findAll()
+        .then(listarUsuarios => {
+            res.render('users/listar', {listarUsuarios: listarUsuarios})
+        });
+
+    },
+   delete: (req, res) =>{
+        let userId = req.params.id;
+        User.destroy({where: {id: userId}}) 
+        .then(()=>{
+            return res.redirect('/users')})
+        .catch(error => res.send(error)) 
+    },
+    
     processRegister:(req,res)=>{
         const resultValidation = validationResult(req);
 
@@ -33,9 +55,8 @@ const usersController={
             })
         }
 
-
     //tiene que salir un cartel q ya esta en uso el mail si se repite 2 veces//
-        let userInDB = User.findByField ('email', req.body.email);
+    let userToLogin = Users.findOne({where: {email: req.body.email}});// no anda esta roto
         if (userInDB){
             return res.render ('users/register',{
                 errors:{
@@ -47,14 +68,13 @@ const usersController={
             });
         }
         
-        //crea nuevos usuarios/ 
+        //crea nuevos usuarios en json/ 
         let userToCreate= {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),
             avatar: req.file.filename,
             rol: "cliente"
         }
-
 
         let userCreated=  User.create(userToCreate);
 
@@ -64,7 +84,7 @@ const usersController={
         return res.render('users/login');
         },
     processLogin:(req,res)=>{
-        let userToLogin = User.findByField('email', req.body.email);
+        let userToLogin = User.findByField('email', req.body.email); //busco mal
 
         if (userToLogin){
         let isOkThepassword= bcryptjs.compareSync(req.body.password,userToLogin.password);
@@ -73,7 +93,7 @@ const usersController={
             req.session.userLogged= userToLogin;
 
             if( req.body.remeber_user){
-            res.cookie('userEmail', req.body.email,{ maxAge: (1000 * 60) * 2})
+            res.cookie('userEmail', req.body.email,{ maxAge: (1000 * 60) * 2}) 
             }
 
             return res.redirect('perfil')
@@ -96,6 +116,14 @@ const usersController={
 
     },
 
+    destroy: (req, res) =>{
+        let userId = req.params.id;
+        User.destroy({where: {id: userId}, force: true}) // force: true es para asegurar que se ejecute la acción
+        .then(()=>{
+            return res.redirect('/users')})
+        .catch(error => res.send(error)) 
+    },
+
     recover:(req,res)=>{
         return res.render('users/recuperar');
     },
@@ -105,38 +133,13 @@ const usersController={
         user: req.session.userLogged
         });
 
-    },
+    },//esta bien
 
     logout:(req,res)=>{
         res.clearCookie('userEmail')
         req.session.destroy();
         return res.redirect('/');
-    },
-    edit:(req, res)=> {
-        let id=req.params.id;
-        let user=User.find(id);
-        res.render('./users/register',{user})
-    },
-    editar:(req,res)=>{
-        let img=User.find(req.params.id);
-        let producto={
-            id:req.params.id,
-            nombre:req.params.body.nombre,
-            apellido:req.params.body.apellido,
-            nombreDeUsuario:req.params.body.nombreDeUsuario,
-            email:req.params.body.email,
-            tel:req.params.body.tel,
-            password:req.params.body.password,
-            avatar:req.file!=null?req.file.filename:img.imagen,
-            
-        };
-        User.update(producto);
-        res.redirect("/perfil")
-    },
-    delete:(req,res)=>{
-        User.delete(req.params.id);
-        res.redirect("/");
-    }
+    }// esta bien
 }
 
 module.exports=usersController;

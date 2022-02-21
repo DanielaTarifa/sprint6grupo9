@@ -23,14 +23,10 @@ router.post('/login', usersController.processLogin);
 
 
 //formulario de registro
-router.get('/register',guestMiddleware, usersController.register);
+router.get('/register',guestMiddleware, usersController.register);//esto mi add
 //procesa el registro
-router.post('/register', uploadFile.single('avatar'), validaciones, usersController.processRegister);
+router.post('/register', uploadFile.single('avatar'), validaciones, usersController.processRegister);//esto guarda usuarios
 
-//no se puede entrar xq no se como hicieron el model
-//les deje echo las funciones solo falta q arreglen como editar el json
-router.get('/register/:id', uploadFile.single('avatar'), validaciones, usersController.edit);
-router.put('/register/:id', uploadFile.single('avatar'), validaciones, usersController.editar);
 //formulario de recuperar
 router.get('/recuperar', usersController.recover);
 //formulario de perfil
@@ -38,9 +34,12 @@ router.get('/perfil', authMiddleware ,usersController.perfil);
 
 
 //para salir del perfil
-router.get('/logout/', userLoggedMiddleware, usersController.logout);
+router.get('/logout/', userLoggedMiddleware, usersController.logout);// esta bien
 
 
-router.delete('/borrar/:id',usersController.delete);
+//crud
+router.get('/listar', guestMiddleware ,usersController.listar);
+
+
 
 module.exports= router;

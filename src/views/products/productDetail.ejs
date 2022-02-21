@@ -34,8 +34,7 @@
                     <div class="size-container">
                         <% for( let cuota of cuotas ) { %>
                             <% if (cuota.id == producto.duesId) { %>
-                                <h3 class="title" >Cuotas: <%= cuota.name%></h3>
-                                <p>Precio en cuotas:  <%=parseInt(producto.price/cuota.name)%> </p>
+                                <h3 class="title" > COMPRALO EN <%= cuota.name%> CUOTAS DE $ <%=parseInt(producto.price/cuota.name)%></h3>
                                 
                             <% } %>
                             
@@ -54,7 +53,7 @@
                             <button class="botoneDetail" type="submit"><a  class="letradetail" href="/ProductCart">Agregar a carrito</a> </button>
                             
                             <i class="fas fa-dollar-sign"></i>
-                            <h1>Precio TOTAL: <%=mil(producto.price)%></h1>
+                            <h1><%=mil(producto.price)%></h1>
 
                         </div>
                     </div>
@@ -77,7 +76,7 @@
                             </div>
                             <div class="main-article">
                                                     
-                            <p class="price"><%=mil(producto.price)%></p>
+                            <p class="price">$<%=mil(producto.price)%></p>
                             <p class="discount">Envío Gratis</p>
                             <h3 class="description"><%=producto.name%></h3>
                             <button class="botone3"><a href="/ProductDetail/<%=producto.id%>" class="letra3">Ver más </a></button>

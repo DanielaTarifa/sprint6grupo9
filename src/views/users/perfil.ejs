@@ -14,11 +14,11 @@
         <div class="perfil">
             <img class="fotoPerfil" src="img/avatar/<%= user.avatar %>" alt="FotoPerfil" width="150"
             height="145">
-            <label>Nombre: <%= user.nombre %></label>
-            <label>Apellido:<%= user.apellido %> </label>
+            <label>Nombre: <%= user.name %></label>
+            <label>Apellido:<%= user.lastname%> </label>
             <label>Nombre de usuario: <%= user.nombreDeUsuario%>  </label>
             <label>E-mail: <%= user.email %></label>
-            <label>Telefono: <%= user.tel%></label>
+            <label>Telefono: <%= user.cel%></label>
         </div>
 
         <% if (user && user.rol == "cliente") { %>
@@ -43,6 +43,8 @@
                 <div class="producto">
                     <button  class="reg2" style="width: auto;margin-left: 13px;" type="submit"><a  style="color: aliceblue; text-decoration: none;" href="/allproducts">Modificar productos</a> </button>
                     <button  class="reg2" style="width: auto;margin-left: 13px;" type="submit"><a href="/agregarProducto" style="color: aliceblue; text-decoration: none;" >Crear producto</a> </button>
+                  
+                    <button  class="reg2" style="width: auto;margin-left: 13px;" type="submit"><a href="/listar" style="color: aliceblue; text-decoration: none;" >Ver todos los Usuarios</a> </button>
                 </div>
             </div>
         </main>
