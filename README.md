@@ -1,6 +1,6 @@
 # Compu mundo hiper mega red Tommy chips & asociados 💻
 ## Trello 📝
-https://trello.com/b/HhqyqRzJ/trabajo-integrador-sprint-5
+  https://trello.com/b/691TA76v/trabajo-integrador-sprint-6
 
 para acceder por login como comprador=
 
