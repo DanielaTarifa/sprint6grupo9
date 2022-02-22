@@ -1,2 +1,32 @@
    <!--<form method="POST" action="/editarusuario/<%#=editUs.id%>?_method=put " enctype="multipart/form-data">   
 -->
+
+
+<form action="/products/search" method="POST">
+              <input type="text" placeholder="Buscar..." class="input" name="search">
+              <div class="lupita">
+                <button type="submit"><i class="fas fa-search"></i></button>
+               </div>
+            </form>
+
+
+let userss = req.body;
+            console.log('soy la nueva imagen: ' + req.body.avatar + "--------------")
+            console.log('soy la vieja imagen'+ req.body.oldAvatar + "--------------")
+
+            userss.avatar = req.file ? req.file.filename : req.body.oldAvatar;
+            if (req.file===undefined) {
+                userss.avatar = req.body.oldAvatar
+            } else {
+                // Actualizaron la foto, saco su nombre del proceso
+                userss.avatar = req.file.filename 
+            }
+            delete userss.oldAvatar;
+
+
+
+
+            req.params.id
+
+
+<button  class="reg2" type="submit" href="/" ><a >Actualizar datos</a> </button>

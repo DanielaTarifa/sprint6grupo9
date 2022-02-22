@@ -139,6 +139,20 @@ const usersController={
     edit: (req, res)=> {
         res.render('users/editarusuario',{user: req.session.userLogged});
         /*
+        let userId = req.params.id;
+        let promUsers = Users.findByPk(userId, {
+            include: ['rol']
+        })
+        let promRoles = Rols.findAll();
+
+        Promise
+        .all([promUsers, promRoles])
+        .then(([user, roles]) => {
+            return res.render('users/editarusuario/', {usere: req.session.userLogged,user, roles})
+        })
+        .catch(error => res.send(error))
+        */
+        /*
         let pedidoUser=Users.findByPk(req.params.id);
         let promesaRol= Rols.findAll();
         let promesaPedido= pedidoUser
@@ -165,6 +179,8 @@ const usersController={
     }*/
 
     update: (req, res)=>{
+
+        let unProducto= Users.findByPk(req.params.id)
         
         Users.update({
             name: req.body.nombre,
@@ -172,22 +188,24 @@ const usersController={
             userName: req.body.nombreDeUsuario,
             email: req.body.email,
             cel: req.body.tel,
-            avatar:req.file.filename,
+            avatar:req.file!=null?req.file.filename:unProducto.avatar,
         },{
-            where: { id: req.params.id}
+            where: { id: req.params.id,
+
+            }
         })
         .then( () => {
-            
                 req.session.user = req.body.nombre;
                 req.session.email = req.body.email;
-                req.session.image = req.file.filename;
+                req.session.imagen = req.file.filename;
                 console.log(req.session)
+                
                 res.redirect("/");
         })
+        
         .catch( error => {
             return res.send(error);
         });
-    
     },
     
     

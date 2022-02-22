@@ -12,7 +12,7 @@
         <div class="formulario">
             
          
-            <form method="POST" action="/perfil/edit/:id?_method=put " enctype="multipart/form-data">   
+            <form method="POST" action="/perfil/edit/<%= user.id %>?_method=put " enctype="multipart/form-data">   
 
                 <div class="register">
 
@@ -56,7 +56,7 @@
                             class="reg" 
                             id="avatar"
                             value="<%= user.avatar %>" 
-                            ><img src="/img/<%=user.avatar%>" alt="producto" width="100" class="product_img"></a>
+                            ><img src="/img/avatar/<%=user.avatar%>" alt="producto" width="100" class="product_img"></a>
 
                             <label for="email"></label>
                             <input 
@@ -101,7 +101,7 @@
                         
                 </form>
 
-                        <button  class="reg2" type="submit" href="/" ><a >Actualizar datos</a> </button>
+                        <button  class="reg2" type="submit" href="/perfil/edit/<%= user.id %>" ><a >Actualizar datos</a> </button>
                     
                 </div>
         </div>
