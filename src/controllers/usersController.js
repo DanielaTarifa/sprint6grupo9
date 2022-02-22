@@ -137,24 +137,26 @@ const usersController={
     },
 
     edit: (req, res)=> {
-        res.render('./admin/edit');
+        res.render('./perfil');
     },
     update: (req, res)=>{
         
         db.Users.update({
-            full_name: req.body.fullName,
+            name: req.body.nombre,
+            lastname: req.body.apellido,
+            userName: req.body.nombreDeUsuario,
             email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 10),
+            cel: req.body.tel,
             avatar: req.file.filename,
         },{
             where: { id: req.params.id}
         })
         .then( () => {
-                req.session.user = req.body.fullName;
+                req.session.user = req.body.nombre;
                 req.session.email = req.body.email;
                 req.session.image = req.file.filename;
                 console.log(req.session)
-                res.redirect("/");
+                res.redirect("/perfil");
         })
         .catch( error => {
             return res.send(error);
