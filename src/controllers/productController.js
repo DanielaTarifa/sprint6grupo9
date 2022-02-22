@@ -33,13 +33,17 @@ const productController={
         .catch(error => res.send(error))
 
     },
+
     update:(req, res)=> {
+        let foto=Products.findByPk(req.params.id);
+    
+
         Products.update({
             name:req.body.nombre,
             description:req.body.descripcion,
             duesId:req.body.cuotas,
             price:req.body.precio,
-            img:req.file.filename,
+            img: req.file != undefined ? req.file.filename : foto.img,
             visibility:req.body.visualizacion,
             stock:req.body.stock,
             stockMin:req.body.stockMinimo,
@@ -121,6 +125,20 @@ const productController={
     /*
     index: (req, res)=> {
         res.render('./products/index')
+    },*/
+    /*search:(req, res)=>{
+
+        let search= req.query.search;
+
+        let products= Products.findAll({
+            where:{
+                name: { [Op.like] : '%' + search + '%' }
+            },
+            include : ['duesNumbers','category', 'section']
+        })
+        .then( (products)=>{
+            res.redirect('/todos',{listadoClientProduct:products });
+        })
     },*/
     
     add:(req, res)=>{

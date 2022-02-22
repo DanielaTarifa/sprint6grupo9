@@ -20,12 +20,12 @@ var upload = multer({ storage: storage })
 router.get('/', productController.all);
 //detalle
 router.get('/productDetail/:id', productController.detail);
-
 router.get('/productCart',productController.cart);
 router.get('/resumen',productController.resumen);
 
 //search
-/*router.get('/search', productController.search);*/
+/*router.get('/search', productController.search)
+router.post('/search', productController.search);;*/
 
 //CRUD- create, read, update, delete
 //crear
@@ -39,6 +39,7 @@ router.get('/editarProducto/:id', productController.edit);//editar
 router.put('/editarProducto/:id',upload.single("imagen"), productController.update);//actualizar
 //eliminar
 router.delete('/borrar/:id',productController.delete);
+
 
 
 module.exports= router;

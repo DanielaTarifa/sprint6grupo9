@@ -40,5 +40,8 @@ router.get('/listar', guestMiddleware ,usersController.listar);
 router.post('/register', uploadFile.single('avatar'), validaciones, usersController.processRegister);//agrega usuarios
 router.get('/borrar/:id', guestMiddleware ,usersController.delete);
 
+router.post('/perfil/:id', guestMiddleware ,usersController.edit);
+router.get('/perfil/:id', guestMiddleware ,usersController.update);
+
 
 module.exports= router;

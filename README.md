@@ -6,7 +6,7 @@ para acceder por login como comprador=
 
 ° email:  usuario@gmail.com
 
-° contraseña:  1234567890
+° contraseña: cliente1234
 
 para acceder por login como administrador=
 
