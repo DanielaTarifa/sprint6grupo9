@@ -1251,7 +1251,7 @@ th {
     padding: 5%;
 }
 .botonAdd{
-    margin-bottom: 40%;
+    margin-bottom: 100px;
 }
 }
 
@@ -1588,7 +1588,7 @@ th {
     justify-content: center;
     border-radius: 5px ; 
     color: white;
-    margin-bottom: 35%;
+    margin-bottom: 55%;
 }
 .botonAdd:hover{
     background-color: rgb(7, 194, 194);
