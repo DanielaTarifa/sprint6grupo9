@@ -40,8 +40,8 @@ router.get('/listar', guestMiddleware ,usersController.listar);
 router.post('/register', uploadFile.single('avatar'), validaciones, usersController.processRegister);//agrega usuarios
 router.get('/borrar/:id', guestMiddleware ,usersController.delete);
 
-router.post('/perfil', guestMiddleware ,usersController.edit);
-router.get('/perfil', guestMiddleware ,usersController.update);
+router.post('/editarusuario', guestMiddleware ,usersController.edit);
+router.get('/editarusuario',usersController.update);
 
 
 module.exports= router;

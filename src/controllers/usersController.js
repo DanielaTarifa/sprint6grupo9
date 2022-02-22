@@ -137,7 +137,7 @@ const usersController={
     },
 
     edit: (req, res)=> {
-        res.render('./perfil');
+        res.render('./editarusuario');
     },
     update: (req, res)=>{
         
@@ -156,7 +156,7 @@ const usersController={
                 req.session.email = req.body.email;
                 req.session.image = req.file.filename;
                 console.log(req.session)
-                res.redirect("/perfil");
+                res.redirect("/");
         })
         .catch( error => {
             return res.send(error);

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %> 
+    
+<body>
+
+    <%- include('../partials/header') %> 
+
+    <div class="main-register">
+    
+        <div class="formulario">
+            
+            <form method="POST" action="/editarusuario" enctype="multipart/form-data">   
+
+                <div class="register">
+
+                    <h1 class="registrate">EDITAR PERFIL</h1><br>
+                        
+                            <label ></label>
+                            <input 
+                            type="text" 
+                            class="reg " 
+                            name="nombre" 
+                            id="nombre" 
+                            placeholder="Ingresa tu nombre" 
+                            value=""
+                            >
+
+                            <label for="apellido"></label>
+                            <input 
+                            type="text" 
+                            class="reg <%= locals.errors && errors.apellido ? 'is-invalid' : null %>" 
+                            name="apellido" 
+                            id="apellido" 
+                            placeholder="Ingresa tu apellido" 
+                            value=""
+                            >
+                        
+                            <label for="Nombre de usuario"></label>
+                            <input 
+                            type="text" 
+                            class="reg <%= locals.errors && errors.nombreDeUsuario ? 'is-invalid' : null %>" 
+                            name="nombreDeUsuario" 
+                            id="Nombre de usuario" 
+                            placeholder="Ingresa tu nombre de usuario" 
+                            value="<%= locals.oldData ? oldData.nombreDeUsuario : null %>"
+                            >
+                        
+
+                            <label for="avatar">Elige una foto de perfil</label>
+                            <input 
+                            type="file" 
+                            name="avatar" 
+                            class="reg" 
+                            id="avatar"
+                            value="<%= locals.oldData ? oldData.avatar : null %>" 
+                            >
+
+                            <label for="email"></label>
+                            <input 
+                            type="email" 
+                            class="reg" 
+                            name="email" 
+                            id="e-mail" 
+                            placeholder="Ingresa tu email" 
+                            value="<%= locals.oldData ? oldData.email : null %>"
+                            >
+
+                            <label for="tel"></label>
+                            <input 
+                            type="text" 
+                            class="reg" 
+                            name="tel" 
+                            id="tel" 
+                            placeholder="Celular/Teléfono" 
+                            value="<%= locals.oldData ? oldData.tel : null %>"
+                            >
+
+                            <label for="password"></label>
+                            <input 
+                            type="password" 
+                            class="reg" 
+                            name="password" 
+                            id="contraeña" 
+                            placeholder="Crea una contraseña" 
+                            value="<%= locals.oldData ? oldData.password : null %>"
+                            >
+                    
+                            <label for="contraeña"></label>
+                            <input 
+                            type="password" 
+                            class="reg" 
+                            name="otraPassword" 
+                            id="contraeña" 
+                            placeholder="Confirmar Contraseña" 
+                            value="<%= locals.oldData ? oldData.otraPassword : null %>"
+                            >
+                        
+                </form>
+
+                        <button  class="reg2" type="submit" href="/" ><a >Actualizar datos</a> </button>
+                    
+                </div>
+        </div>
+
+    </div>
+
+    <%- include('../partials/footer') %>
+    
+</body>
+</html>
