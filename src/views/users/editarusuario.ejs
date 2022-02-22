@@ -11,7 +11,8 @@
     
         <div class="formulario">
             
-            <form method="POST" action="/editarusuario" enctype="multipart/form-data">   
+         
+            <form method="POST" action="/perfil/edit/:id?_method=put " enctype="multipart/form-data">   
 
                 <div class="register">
 
@@ -24,27 +25,27 @@
                             name="nombre" 
                             id="nombre" 
                             placeholder="Ingresa tu nombre" 
-                            value=""
+                            value="<%= user.name %>"
                             >
 
                             <label for="apellido"></label>
                             <input 
                             type="text" 
-                            class="reg <%= locals.errors && errors.apellido ? 'is-invalid' : null %>" 
+                            class="reg " 
                             name="apellido" 
                             id="apellido" 
                             placeholder="Ingresa tu apellido" 
-                            value=""
+                            value="<%= user.lastname %>"
                             >
                         
                             <label for="Nombre de usuario"></label>
                             <input 
                             type="text" 
-                            class="reg <%= locals.errors && errors.nombreDeUsuario ? 'is-invalid' : null %>" 
+                            class="reg " 
                             name="nombreDeUsuario" 
                             id="Nombre de usuario" 
                             placeholder="Ingresa tu nombre de usuario" 
-                            value="<%= locals.oldData ? oldData.nombreDeUsuario : null %>"
+                            value="<%= user.userName %>"
                             >
                         
 
@@ -54,8 +55,8 @@
                             name="avatar" 
                             class="reg" 
                             id="avatar"
-                            value="<%= locals.oldData ? oldData.avatar : null %>" 
-                            >
+                            value="<%= user.avatar %>" 
+                            ><img src="/img/<%=user.avatar%>" alt="producto" width="100" class="product_img"></a>
 
                             <label for="email"></label>
                             <input 
@@ -64,7 +65,7 @@
                             name="email" 
                             id="e-mail" 
                             placeholder="Ingresa tu email" 
-                            value="<%= locals.oldData ? oldData.email : null %>"
+                            value="<%= user.email %>"
                             >
 
                             <label for="tel"></label>
@@ -74,7 +75,7 @@
                             name="tel" 
                             id="tel" 
                             placeholder="Celular/Teléfono" 
-                            value="<%= locals.oldData ? oldData.tel : null %>"
+                            value="<%= user.cel %>"
                             >
 
                             <label for="password"></label>
@@ -84,8 +85,9 @@
                             name="password" 
                             id="contraeña" 
                             placeholder="Crea una contraseña" 
-                            value="<%= locals.oldData ? oldData.password : null %>"
+                            value=""
                             >
+                            
                     
                             <label for="contraeña"></label>
                             <input 
@@ -94,7 +96,7 @@
                             name="otraPassword" 
                             id="contraeña" 
                             placeholder="Confirmar Contraseña" 
-                            value="<%= locals.oldData ? oldData.otraPassword : null %>"
+                            value=""
                             >
                         
                 </form>

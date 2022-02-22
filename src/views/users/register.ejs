@@ -72,21 +72,21 @@
                                 </div>
                             <% } %>
 
-
+                                <!--
                             <label for="avatar">Elige una foto de perfil</label>
                             <input 
                             type="file" 
                             name="avatar" 
                             class="reg" 
                             id="avatar"
-                            value="<%= locals.oldData ? oldData.avatar : null %>" 
+                            value="<%#= locals.oldData ? oldData.avatar : null %>" 
                             >
-                            <% if (locals.errors && errors.avatar) { %>
+                            <%# if (locals.errors && errors.avatar) { %>
                                 <div class="text-danger">
-                                    <%= errors.avatar.msg %> 
+                                    <%#= errors.avatar.msg %> 
                                 </div>
-                            <% } %>
-
+                            <%# } %>
+                                -->
 
                             <label for="email"></label>
                             <input 

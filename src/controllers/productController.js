@@ -17,7 +17,94 @@ const Numbersofinstallments = db.Numbersofinstallments;
 const Sections = db.Sections;
 
 const productController={
+    
+    all:(req,res)=>{
+        
+        let productos =Products.findAll()
+        .then(function(productos){
+            res.render('./products/index',{productos:productos,mil:toThousand})
+        })
+        
+    },
+    listAdmi:(req,res)=>{//listado para los admi
+        let listadoAdmi= Products.findAll()
+        .then(function(listadoAdmi) {
+            
+            res.render('./products/allproducts',{listadoAdmi:listadoAdmi,mil:toThousand})})
+        .catch(error => res.send(error))
+    },
+    listClient:(req,res)=>{//listado para los clientes
+        let listadoClientProduct= Products.findAll()
+        .then(function(listadoClientProduct) {
+            
+            res.render('./products/todos',{listadoClientProduct:listadoClientProduct,mil:toThousand})})
+        .catch(error => res.send(error))
+    },
+    /*search:(req, res)=>{
+        let search= req.query.barra;
+        let products= Products.findAll({
+            where:{
+                name: { [Op.like] : '%' + search + '%' }
+            },
+            include : ['duesNumbers','category', 'section']
+        })
+        console.log("RESULTADO: " + products.length);
+    },*/
+    /*
+    index: (req, res)=> {
+        res.render('./products/index')
+    },*/
+    search:(req, res)=>{
 
+        let search= req.query.search;
+
+        let products= Products.findAll({
+            where:{
+                name: { [Op.like] : '%' + search + '%' }
+            },
+            include : ['duesNumbers','category', 'section']
+        })
+        .then( (products)=>{
+            res.redirect('/todos',{listadoClientProduct:products });
+        })
+    },
+    
+    add:(req, res)=>{
+        let promesaCuotas= Numbersofinstallments.findAll();
+        let promesaSections= Sections.findAll();
+        let promesaCategories= Categories.findAll();
+        
+        Promise.all([promesaCuotas, promesaSections, promesaCategories])
+        .then(function([ cuotas, secciones, categorias]) {
+            console.log(cuotas);
+            console.log(secciones);
+            console.log(categorias);
+            res.render('./products/productAdd', {cuotas:cuotas, secciones:secciones, categorias:categorias})})
+        .catch(error => res.send(error))
+    
+    },
+    create:(req,res)=>{
+        console.log(req.file.filename)
+            Products.create({
+                name:req.body.nombre,
+                description:req.body.descripcion,
+                duesId:req.body.cuotas,
+                price:req.body.precio,
+                img:req.file.filename,
+                visibility:req.body.visualizacion,
+                stock:req.body.stock,
+                stockMin:req.body.stockMinimo,
+                stockMax:req.body.stockMaximo,
+                sectionId:req.body.secciones,
+                categoryId:req.body.categorias,
+            })
+            
+        .then(()=>{
+            res.redirect('/');
+        })
+            
+        .catch(error => res.send(error))
+    },
     
     edit:(req, res)=> {
         let pedidoProducto=Products.findByPk(req.params.id);
@@ -35,15 +122,15 @@ const productController={
     },
 
     update:(req, res)=> {
-        let foto=Products.findByPk(req.params.id);
-    
+        let unProducto=Products.findByPk(req.params.id);
+        console.log(req.file.filename)
 
         Products.update({
             name:req.body.nombre,
             description:req.body.descripcion,
             duesId:req.body.cuotas,
             price:req.body.precio,
-            img: req.file != undefined ? req.file.filename : foto.img,
+            img:req.file!=null?req.file.filename:unProducto.img,
             visibility:req.body.visualizacion,
             stock:req.body.stock,
             stockMin:req.body.stockMinimo,
@@ -90,93 +177,6 @@ const productController={
         res.redirect("/allproducts");
     },
 
-    all:(req,res)=>{
-        
-        let productos =Products.findAll()
-        .then(function(productos){
-            res.render('./products/index',{productos:productos,mil:toThousand})
-        })
-        
-    },
-    listAdmi:(req,res)=>{//listado para los admi
-        let listadoAdmi= Products.findAll()
-        .then(function(listadoAdmi) {
-            
-            res.render('./products/allproducts',{listadoAdmi:listadoAdmi,mil:toThousand})})
-        .catch(error => res.send(error))
-    },
-    listClient:(req,res)=>{//listado para los clientes
-        let listadoClientProduct= Products.findAll()
-        .then(function(listadoClientProduct) {
-            
-            res.render('./products/todos',{listadoClientProduct:listadoClientProduct,mil:toThousand})})
-        .catch(error => res.send(error))
-    },
-    /*search:(req, res)=>{
-        let search= req.query.barra;
-        let products= Products.findAll({
-            where:{
-                name: { [Op.like] : '%' + search + '%' }
-            },
-            include : ['duesNumbers','category', 'section']
-        })
-        console.log("RESULTADO: " + products.length);
-    },*/
-    /*
-    index: (req, res)=> {
-        res.render('./products/index')
-    },*/
-    /*search:(req, res)=>{
-
-        let search= req.query.search;
-
-        let products= Products.findAll({
-            where:{
-                name: { [Op.like] : '%' + search + '%' }
-            },
-            include : ['duesNumbers','category', 'section']
-        })
-        .then( (products)=>{
-            res.redirect('/todos',{listadoClientProduct:products });
-        })
-    },*/
-    
-    add:(req, res)=>{
-        let promesaCuotas= Numbersofinstallments.findAll();
-        let promesaSections= Sections.findAll();
-        let promesaCategories= Categories.findAll();
-        
-        Promise.all([promesaCuotas, promesaSections, promesaCategories])
-        .then(function([ cuotas, secciones, categorias]) {
-            console.log(cuotas);
-            console.log(secciones);
-            console.log(categorias);
-            res.render('./products/productAdd', {cuotas:cuotas, secciones:secciones, categorias:categorias})})
-        .catch(error => res.send(error))
-    
-    },
-    create:(req,res)=>{
-        console.log(req.file.filename)
-            Products.create({
-                name:req.body.nombre,
-                description:req.body.descripcion,
-                duesId:req.body.cuotas,
-                price:req.body.precio,
-                img:req.file.filename,
-                visibility:req.body.visualizacion,
-                stock:req.body.stock,
-                stockMin:req.body.stockMinimo,
-                stockMax:req.body.stockMaximo,
-                sectionId:req.body.secciones,
-                categoryId:req.body.categorias,
-            })
-            
-        .then(()=>{
-            res.redirect('/');
-        })
-            
-        .catch(error => res.send(error))
-    }
 }
 
 module.exports=productController;

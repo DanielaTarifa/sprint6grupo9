@@ -24,8 +24,8 @@ router.get('/productCart',productController.cart);
 router.get('/resumen',productController.resumen);
 
 //search
-/*router.get('/search', productController.search)
-router.post('/search', productController.search);;*/
+router.get('/search', productController.search)
+/*router.post('/search', productController.search);;*/
 
 //CRUD- create, read, update, delete
 //crear

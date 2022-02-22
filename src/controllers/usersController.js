@@ -1,6 +1,6 @@
 const {validationResult} = require('express-validator');
-const { create } = require('../model/User');
-const User = require('../model/User');
+//const { create } = require('../model/User');
+//const User = require('../model/User');
 const  bcryptjs = require ('bcryptjs');
 const session = require('express-session');
 
@@ -137,21 +137,47 @@ const usersController={
     },
 
     edit: (req, res)=> {
-        res.render('./editarusuario');
-    },
-    update: (req, res)=>{
+        res.render('users/editarusuario',{user: req.session.userLogged});
+        /*
+        let pedidoUser=Users.findByPk(req.params.id);
+        let promesaRol= Rols.findAll();
+        let promesaPedido= pedidoUser
+        Promise.all([promesaPedido, promesaRol])
+        .then(function([editUs, editRol]) {
+            
+            res.render('users/editarusuario/',{user: req.session.userLogged, editUs:editUs, editRol:editRol})})
+        .catch(error => res.send(error))
+        */
         
-        db.Users.update({
+        
+    }, /*
+    update: (req, res)=>{
+       
+        Users.update({
             name: req.body.nombre,
             lastname: req.body.apellido,
             userName: req.body.nombreDeUsuario,
             email: req.body.email,
             cel: req.body.tel,
+            password: bcryptjs.hashSync(req.body.password, 10),
             avatar: req.file.filename,
+            rolId: 2 })
+    }*/
+
+    update: (req, res)=>{
+        
+        Users.update({
+            name: req.body.nombre,
+            lastname: req.body.apellido,
+            userName: req.body.nombreDeUsuario,
+            email: req.body.email,
+            cel: req.body.tel,
+            avatar:req.file.filename,
         },{
             where: { id: req.params.id}
         })
         .then( () => {
+            
                 req.session.user = req.body.nombre;
                 req.session.email = req.body.email;
                 req.session.image = req.file.filename;

@@ -35,12 +35,13 @@
                 <!-- <input  class="rellenoAdd" type="text" name="categoria" id="categoria" required>-->
         <br>
                 <label for="descripcion">Descripción</label>
-                <textarea  class="rellenoAddDescrition" type="text" name="descripcion" id="descripcion" cols="10" rows="5"  value="<%=producto.description%>" required></textarea>
+                <input  class="rellenoAddDescrition" type="text" name="descripcion" id="descripcion" cols="10" rows="5"  value="<%=producto.description%>" required></input>
         <br>
                 <label for="imagen">Selecciona una imagen</label>
-                <input class="rellenoAdd"  type="file" name="imagen" id="imagen" value="<%=producto.img%>" required>
-                
-        
+                <input class="rellenoAdd"  type="file" name="imagen" id="imagen" value="<%=producto.img%>" >
+                <img src="/img/<%=producto.img%>" alt="producto" width="100" class="product_img"></a>
+                </input>
+                <br>
                 <label for="cuotas">Cuotas</label>
                 <select name="cuotas" >
                     <% for( let i = 0; i < cuotas.length; i++ ) { %>

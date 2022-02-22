@@ -1,0 +1,2 @@
+   <!--<form method="POST" action="/editarusuario/<%#=editUs.id%>?_method=put " enctype="multipart/form-data">   
+-->
