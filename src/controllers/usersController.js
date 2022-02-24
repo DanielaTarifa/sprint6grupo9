@@ -138,32 +138,6 @@ const usersController={
 
     edit: (req, res)=> {
         res.render('users/editarusuario',{user: req.session.userLogged});
-        /*
-        let userId = req.params.id;
-        let promUsers = Users.findByPk(userId, {
-            include: ['rol']
-        })
-        let promRoles = Rols.findAll();
-
-        Promise
-        .all([promUsers, promRoles])
-        .then(([user, roles]) => {
-            return res.render('users/editarusuario/', {usere: req.session.userLogged,user, roles})
-        })
-        .catch(error => res.send(error))
-        */
-        /*
-        let pedidoUser=Users.findByPk(req.params.id);
-        let promesaRol= Rols.findAll();
-        let promesaPedido= pedidoUser
-        Promise.all([promesaPedido, promesaRol])
-        .then(function([editUs, editRol]) {
-            
-            res.render('users/editarusuario/',{user: req.session.userLogged, editUs:editUs, editRol:editRol})})
-        .catch(error => res.send(error))
-        */
-        
-        
     },
 
     update: (req, res)=>{
