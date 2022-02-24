@@ -40,34 +40,6 @@ const productController={
             res.render('./products/todos',{listadoClientProduct:listadoClientProduct,mil:toThousand})})
         .catch(error => res.send(error))
     },
-    /*search:(req, res)=>{
-        let search= req.query.barra;
-        let products= Products.findAll({
-            where:{
-                name: { [Op.like] : '%' + search + '%' }
-            },
-            include : ['duesNumbers','category', 'section']
-        })
-        console.log("RESULTADO: " + products.length);
-    },*/
-    /*
-    index: (req, res)=> {
-        res.render('./products/index')
-    },*/
-    search:(req, res)=>{
-
-        let search= req.query.search;
-
-        let products= Products.findAll({
-            where:{
-                name: { [Op.like] : '%' + search + '%' }
-            },
-            include : ['duesNumbers','category', 'section']
-        })
-        .then( (products)=>{
-            res.redirect('/todos',{listadoClientProduct:products });
-        })
-    },
     
     add:(req, res)=>{
         let promesaCuotas= Numbersofinstallments.findAll();
@@ -175,6 +147,19 @@ const productController={
             }
         })
         res.redirect("/allproducts");
+    },
+
+    search: (req, res) => {
+    
+        let search = req.query.search.toLowerCase()
+        
+        db.Products.findAll({
+            include: ['Category']
+        })
+        .then( products => {
+            let filtrados = products.filter(e => e.name.toLowerCase().includes(search) || e.Category.name.toLowerCase().includes(search));
+            res.render('./products/categories', { filtrados})
+        })
     },
 
 }

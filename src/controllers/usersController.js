@@ -19,7 +19,7 @@ const usersController={
         return res.render('users/register')
     },
 
-    listar:(req,res)=>{//funciona (solo funciona cuando no estas logeado 0.0) arreglar css y ejs
+    listar:(req,res)=>{//funciona (solo funciona cuando no estas logeado 0.0)
         Users.findAll()
         .then(listarUsuarios => {
             res.render('users/listar', {listarUsuarios: listarUsuarios})
@@ -33,7 +33,7 @@ const usersController={
         .then(()=>{
             return res.redirect('/')})
         .catch(error => res.send(error)) 
-    },//falta probar
+    },
     
     processRegister:(req,res)=>{
         const resultValidation = validationResult(req);
@@ -164,19 +164,7 @@ const usersController={
         */
         
         
-    }, /*
-    update: (req, res)=>{
-       
-        Users.update({
-            name: req.body.nombre,
-            lastname: req.body.apellido,
-            userName: req.body.nombreDeUsuario,
-            email: req.body.email,
-            cel: req.body.tel,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            avatar: req.file.filename,
-            rolId: 2 })
-    }*/
+    },
 
     update: (req, res)=>{
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %>
+
+<body>
+
+    <%- include('../partials/header') %> 
+
+    <!-- </header> -->
+
+    <main class="main-home">
+        <section class="last-visit">
+            
+            <h3>RESULTADO DE BÚSQUEDA</h3>
+    <div class="products">
+
+            <% filtrados.forEach(element => { %>
+            
+                    <article>
+
+                            <div class="imagenes">
+                            <a href="#"> <img src="/img/<%=element.img%>" alt="producto" width="360" class="product_img"></a> 
+                        </div>
+
+                        <div class="main-article">
+
+                        <p class="price"> $<%= element.price %></p>
+                        <p class="discount">Envío Gratis</p>
+                        <h3 class="description"><%=element.name%></h3>
+                        <button class="botone3"><a href="/ProductDetail/<%=element.id%>" class="letra3">Ver más </a></button>
+
+                    </div>
+                </article>
+            <% }) %>
+
+            </div>
+
+        </section>      
+    </main>
+
+    <%- include('../partials/footer') %> 
+    
+</body>
+</html>
