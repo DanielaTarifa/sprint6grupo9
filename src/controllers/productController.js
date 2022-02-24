@@ -1,6 +1,6 @@
-const req = require('express/lib/request');
-const jsonDB = require('../model/jsonDatabase');
-const product = jsonDB('products');
+//const req = require('express/lib/request');
+//const jsonDB = require('../model/jsonDatabase');
+//const product = jsonDB('products');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const path = require('path');
@@ -95,7 +95,7 @@ const productController={
 
     update:(req, res)=> {
         let unProducto=Products.findByPk(req.params.id);
-        console.log(req.file.filename)
+        //console.log(req.file.filename)
 
         Products.update({
             name:req.body.nombre,
@@ -115,7 +115,7 @@ const productController={
             }
         })
         .then(()=>{
-            res.redirect("/")
+            res.redirect("/allproducts")
         })
         .catch(error => res.send(error))
 
