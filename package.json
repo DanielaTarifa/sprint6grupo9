@@ -6,16 +6,10 @@
   "scripts": {
     "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Marianocr98/haciendo-pruebas2.git"
-  },
+  
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Marianocr98/haciendo-pruebas2/issues"
-  },
-  "homepage": "https://github.com/Marianocr98/haciendo-pruebas2#readme",
+  
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.0",
@@ -27,7 +21,7 @@
     "multer": "^1.4.4",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
-    "sequelize": "^6.16.1"
+    "sequelize": "^6.17.0"
   },
   "keywords": []
 }
