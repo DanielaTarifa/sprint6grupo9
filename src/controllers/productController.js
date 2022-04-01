@@ -11,16 +11,16 @@ const { buildCheckFunction } = require('express-validator');
 const { createConnection } = require('net');
 
 //una forma de llamar a modelos de la carpeta models
-const Products = db.Products;
-const Categories = db.Categories;
-const Numbersofinstallments = db.Numbersofinstallments;
-const Sections = db.Sections;
+const Products = db.Product;
+const Categories = db.Category;
+const Numbersofinstallments = db.Numbersofinstallment;
+const Sections = db.Section;
 
 const productController={
     
     all:(req,res)=>{
         
-        let productos =Products.findAll()
+        let productos =db.Product.findAll()
         .then(function(productos){
             res.render('./products/index',{productos:productos,mil:toThousand})
         })

@@ -35,3 +35,67 @@ let userss = req.body;
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+
+
+  ----------------------index-------------
+  
+            <h3>PRODUCTOS DESTACADOS</h3>
+
+            <div class="products">
+                <%  let i=0%>
+                <% for(let i =0; i < 8; i++){ %>
+                    <!--let (uno de esos muchos, callback) of (muchos)-->
+                    <% if (productos[i].visibility == 1 ) { %>
+                        <% if (productos[i].sectionId == 2) { %>
+                    
+                            <article>
+                                <div class="imagenes">
+                                    <a href="#"> <img src="/img/<%=productos[i].img%>" alt="producto" width="360" class="product_img"></a>
+                                </div>
+                                <div class="main-article">
+                                                        
+                                <p class="price">$<%=mil(productos[i].price)%></p>
+                                <p class="discount">Envío Gratis</p>
+                                <h3 class="description"><%=productos[i].name%></h3>
+                                <button class="botone3"><a href="/ProductDetail/<%=productos[i].id%>" class="letra3">Ver más </a></button>
+                                
+                                
+                                    </div>
+                                </article>
+                        <% } %>
+                        
+                                            
+                    <% } %>
+                                        
+                <%} %> 
+                
+                 
+            </div>
+            <h3>OFERTAS</h3>
+            <div class="products">
+                <% for(let producto of productos){ %>
+                    <!--let (uno de esos muchos, callback) of (muchos)-->
+                    <% if (producto.visibility == 1) { %>
+                        <% if (producto.sectionId == 1) { %>
+                        <article>
+                            <div class="imagenes">
+                                <a href="#"> <img src="/img/<%=producto.img%>" alt="producto" width="360" class="product_img"></a>
+                            </div>
+                            <div class="main-article">
+                                                    
+                            <p class="price">$<%=mil(producto.price)%></p>
+                            <p class="discount">Envío Gratis</p>
+                            <h3 class="description"><%=producto.name%></h3>
+                            <button class="botone3"><a href="/ProductDetail/<%=producto.id%>" class="letra3">Ver más </a></button>
+                            
+                            
+                                </div>
+                            </article>
+                        <% } %>
+                                            
+                    <% } %>
+                                        
+                <%} %> 
+            </div>
+--
+<div class="fotosabajoo">

@@ -6,10 +6,8 @@
   "scripts": {
     "start": "node app.js"
   },
-  
   "author": "",
   "license": "ISC",
-  
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.0",

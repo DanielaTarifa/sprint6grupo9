@@ -11,8 +11,8 @@ const { Op } = require("sequelize");
 
 
 //una forma de llamar a modelos de la carpeta models
-const Users = db.Users;
-const Rols = db.Rols;
+const Users = db.User;
+const Rols = db.Rol;
  
 const usersController={
     register:(req,res)=>{
@@ -29,7 +29,7 @@ const usersController={
 
     delete: (req, res) =>{
         let userId = req.params.id;
-        User.destroy({where: {id: userId}}) 
+        Users.destroy({where: {id: userId}}) 
         .then(()=>{
             return res.redirect('/')})
         .catch(error => res.send(error)) 
@@ -46,7 +46,7 @@ const usersController={
         }
 
     //tiene que salir un cartel q ya esta en uso el mail si se repite 2 veces//
-    let userInDB = db.Users.findAll({where: {email: req.body.email}});
+    let userInDB = db.User.findAll({where: {email: req.body.email}});
         
         if(!userInDB){
             return res.render('./users/register',{
