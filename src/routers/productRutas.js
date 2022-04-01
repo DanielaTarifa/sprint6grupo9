@@ -9,11 +9,11 @@ var storage = multer.diskStorage({
     cb(null, './public/img')
   },
   filename: function (req, file, cb) {
-    let fileName = `${Date.now()}_img${path.extname(file.originalname)}`
-
-    cb(null, fileName )
+    cb(null, file.fieldname + '-' + Date.now())
   }
 })
+
+
 
 var upload = multer({ storage: storage })
 
