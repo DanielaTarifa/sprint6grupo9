@@ -30,3 +30,8 @@ let userss = req.body;
 
 
 <button  class="reg2" type="submit" href="/" ><a >Actualizar datos</a> </button>
+
+-------pack.json-----
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },

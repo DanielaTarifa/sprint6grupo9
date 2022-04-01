@@ -4,7 +4,7 @@
   "description": "https://trello.com/b/GVsEZjRA/trabajo-integrador-sprint-2",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
